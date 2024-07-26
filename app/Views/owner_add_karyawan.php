@@ -44,8 +44,8 @@
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
-                <a class="nav-link" href="#">
+            <li class="nav-item">
+                <a class="nav-link" href="/dashboard_owner">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -60,14 +60,14 @@
 
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link" href="/daftar_karyawan">
+                <a class="nav-link" href="daftar_karyawan">
                     <i class="fas fa-fw fa-user"></i>
                     <span>Daftar Pekerja</span></a>
             </li>
 
             <!-- Nav Item - Utilities Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link" href="/tambah_karyawan">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">
                     <i class="fas fa-fw fa-plus"></i>
                     <span>Tambah Pekerja</span></a>
             </li>

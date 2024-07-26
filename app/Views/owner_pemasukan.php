@@ -44,8 +44,8 @@
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
-                <a class="nav-link" href="#">
+            <li class="nav-item">
+                <a class="nav-link" href="/dashboard_owner">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -88,8 +88,8 @@
             </li>
 
             <!-- Nav Item - Charts -->
-            <li class="nav-item">
-                <a class="nav-link" href="/pemasukan">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">
                     <i class="fas fa-fw fa-arrow-down"></i>
                     <span>Pemasukan</span></a>
             </li>

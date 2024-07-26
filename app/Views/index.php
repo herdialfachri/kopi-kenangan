@@ -49,10 +49,10 @@
           <div class="col-12 col-md-10 d-none d-xl-block">
             <nav class="site-navigation position-relative text-right" role="navigation">
               <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
-                <li><a href="#section-home" class="nav-link">Home</a></li>
+                <li><a href="#section-home" class="nav-link">Beranda</a></li>
                 <li><a href="#section-about" class="nav-link">Tentang</a></li>
                 <li><a href="#section-tujuan" class="nav-link">Tujuan</a></li>
-                <li><a href="#section-services" class="nav-link">Services</a></li>
+                <li><a href="#section-services" class="nav-link">Produk</a></li>
                 <li><a href="login_admin" class="nav-link">Masuk</a></li>
               </ul>
             </nav>
