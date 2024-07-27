@@ -67,8 +67,8 @@
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="buttons.html">Daftar Pemasukan</a>
-                        <a class="collapse-item" href="cards.html">Tambah Pemasukan</a>
+                        <a class="collapse-item" href="/pemasokan">Daftar Pemasukan</a>
+                        <a class="collapse-item" href="/pemasokan/create">Tambah Pemasukan</a>
                     </div>
                 </div>
             </li>
@@ -146,7 +146,7 @@
             </div>
 
             <!-- Nav Item - Supplier Collapse Menu -->
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSupplier"
                     aria-expanded="true" aria-controls="collapseSupplier">
                     <i class="fas fa-fw fa-table"></i>

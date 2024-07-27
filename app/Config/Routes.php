@@ -30,3 +30,9 @@ $routes->post('/pelanggan/store', 'PelangganController::store');
 $routes->get('/suppliers', 'SupplierController::index');
 $routes->get('/supplier/create', 'SupplierController::create');
 $routes->post('/supplier/store', 'SupplierController::store');
+
+$routes->get('/pemasokan', 'PemasokanController::index');
+$routes->get('pemasokan/create', 'PemasokanController::create');
+$routes->post('pemasokan/store', 'PemasokanController::store');
+
+

@@ -44,7 +44,7 @@
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
+            <li class="nav-item ">
                 <a class="nav-link" href="/dashboard_admin">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
@@ -156,13 +156,13 @@
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <a class="collapse-item" href="/suppliers">Daftar Supplier</a>
-                        <a class="collapse-item" href="utilities-border.html">Tambah Supplier</a>
+                        <a class="collapse-item" href="/supplier/create">Tambah Supplier</a>
                     </div>
                 </div>
             </li>
 
             <!-- Nav Item - Pelanggan Collapse Menu -->
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePelanggan"
                     aria-expanded="true" aria-controls="collapsePelanggan">
                     <i class="fas fa-fw fa-table"></i>
