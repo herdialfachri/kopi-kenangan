@@ -167,112 +167,64 @@
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800">Daftar Pekerja</h1>
-                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
                     </div>
 
                     <!-- Content Row -->
 
                     <div class="row">
 
-                    <!-- Tabel Data Karyawan -->
-                    <div class="col-xl-9 col-lg-7">
+                    <!-- Edit Data Karyawan -->
+                    <div class="col-xl-12 col-lg-7">
                         <div class="card shadow mb-4">
-                            <div
-                                class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Tabel Daftar Karyawan</h6>
-                                <div class="dropdown no-arrow">
-                                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                                    </a>
-                                <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
-                                    aria-labelledby="dropdownMenuLink">
-                                    <div class="dropdown-header">Unduh data</div>
-                                        <a class="dropdown-item" href="#">PDF</a>
-                                    </div>
-                                </div>
-                                </div>
+                            <div class="card-header py-3">
+                                <h6 class="m-0 font-weight-bold text-primary">Formulir Ubah Data</h6>
+                            </div>
                             <div class="card-body">
-                                <div class="table-responsive">
-                                    <table class="table table-bordered" width="100%" cellspacing="0">
-                                        <thead>
-                                            <tr>
-                                                <th>ID Karyawan</th>
-                                                <th>Nama</th>
-                                                <th>Jenis Kelamin</th>
-                                                <th>Alamat</th>
-                                                <th>Nomor HP</th>
-                                                <th>Posisi</th>
-                                                <th>Gaji</th>
-                                                <th>Status</th>
-                                                <th>Opsi</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <?php if (!empty($karyawans) && is_array($karyawans)): ?>
-                                                <?php foreach($karyawans as $karyawan): ?>
-                                                    <tr>
-                                                        <td><?= esc($karyawan['id_karyawan']); ?></td>
-                                                        <td><?= esc($karyawan['nama']); ?></td>
-                                                        <td><?= esc($karyawan['jenis_kelamin']); ?></td>
-                                                        <td><?= esc($karyawan['alamat']); ?></td>
-                                                        <td><?= esc($karyawan['nomor_hp']); ?></td>
-                                                        <td><?= esc($karyawan['posisi']); ?></td>
-                                                        <td><?= esc($karyawan['gaji']); ?></td>
-                                                        <td><?= esc($karyawan['status']); ?></td>
-                                                        <td>
-                                                            <a href="<?= site_url('karyawan/edit/'.$karyawan['id_karyawan']); ?>" class="btn btn-warning btn-sm mb-2">Ubah</a>
-                                                            <a href="<?= site_url('karyawan/delete/'.$karyawan['id_karyawan']); ?>" class="btn btn-danger btn-sm mb-2" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?');">Hapus</a>
-                                                        </td>
-                                                    </tr>
-                                                <?php endforeach; ?>
-                                            <?php else: ?>
-                                                <tr>
-                                                    <td colspan="9">Tidak ada data karyawan ditemukan.</td>
-                                                </tr>
-                                            <?php endif; ?>
-                                        </tbody>
-                                    </table>
-                                </div>
+                                <form action="/karyawan/update/<?= $karyawan['id_karyawan']; ?>" method="post">
+                                    <div class="form-group">
+                                        <label for="nama">Nama:</label>
+                                        <input type="text" class="form-control" id="nama" name="nama" value="<?= esc($karyawan['nama']); ?>">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="jenis_kelamin">Jenis Kelamin:</label>
+                                        <select class="form-control" id="jenis_kelamin" name="jenis_kelamin">
+                                            <option value="L" <?= $karyawan['jenis_kelamin'] == 'L' ? 'selected' : ''; ?>>L</option>
+                                            <option value="P" <?= $karyawan['jenis_kelamin'] == 'P' ? 'selected' : ''; ?>>P</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="alamat">Alamat:</label>
+                                        <textarea class="form-control" id="alamat" name="alamat"><?= esc($karyawan['alamat']); ?></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="nomor_hp">Nomor HP:</label>
+                                        <input type="text" class="form-control" id="nomor_hp" name="nomor_hp" value="<?= esc($karyawan['nomor_hp']); ?>">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="posisi">Posisi:</label>
+                                        <input type="text" class="form-control" id="posisi" name="posisi" value="<?= esc($karyawan['posisi']); ?>">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="gaji">Gaji:</label>
+                                        <input type="number" class="form-control" id="gaji" name="gaji" value="<?= esc($karyawan['gaji']); ?>">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="status">Status:</label>
+                                        <select class="form-control" id="status" name="status">
+                                            <option value="Aktif" <?= $karyawan['status'] == 'Aktif' ? 'selected' : ''; ?>>Aktif</option>
+                                            <option value="Tidak Aktif" <?= $karyawan['status'] == 'Tidak Aktif' ? 'selected' : ''; ?>>Tidak Aktif</option>
+                                            <option value="Resign" <?= $karyawan['status'] == 'Resign' ? 'selected' : ''; ?>>Resign</option>
+                                        </select>
+                                    </div>
+                                    <div class="d-flex justify-content-end">
+                                        <a href="/daftar_karyawan" class="btn btn-primary mr-2">Kembali</a>
+                                        <button type="submit" class="btn btn-primary">Perbarui Data</button>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
-
-<!-- Doughnut Chart -->
-<div class="col-xl-3 col-lg-5">
-    <div class="card shadow mb-4">
-        <!-- Card Header - Dropdown -->
-        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-            <h6 class="m-0 font-weight-bold text-primary">Karyawan Berdasarkan Posisi</h6>
-            <div class="dropdown no-arrow">
-                <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                </a>
-                <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
-                    <div class="dropdown-header">Dropdown Header:</div>
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
                 </div>
-            </div>
-        </div>
-        <!-- Card Body -->
-        <div class="card-body">
-            <div class="chart-pie pt-4 pb-2">
-                <canvas id="myPieChart"></canvas>
-            </div>
-            <div class="mt-4 text-center small">
-                <!-- Optional: Add labels for the chart here if needed -->
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Hidden input to store JSON data -->
-<input type="hidden" id="posisiCounts" value='<?= json_encode($posisiCounts); ?>'>
-
 
                 </div>
                 <!-- /.container-fluid -->
@@ -336,7 +288,7 @@
 
     <!-- Page level custom scripts -->
     <script src="<?= base_url('admin/js/demo/chart-area-demo.js'); ?>"></script>
-    <script src="<?= base_url('admin/js/demo/chart-pie-demo.js'); ?>"></script>
+    <script src="<?= base_url('admin/js/demo/chart-pie-demo.js') ;?>"></script>
 
 </body>
 

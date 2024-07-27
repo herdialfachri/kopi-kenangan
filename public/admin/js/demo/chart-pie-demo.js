@@ -3,15 +3,20 @@ Chart.defaults.global.defaultFontFamily = 'Nunito', '-apple-system,system-ui,Bli
 Chart.defaults.global.defaultFontColor = '#858796';
 
 // Pie Chart Example
-var ctx = document.getElementById("myPieChart");
+var ctx = document.getElementById("myPieChart").getContext('2d');
+var posisiCounts = JSON.parse(document.getElementById("posisiCounts").value); // Get JSON data from hidden input
+
+var labels = posisiCounts.map(p => p.posisi);
+var data = posisiCounts.map(p => p.count);
+
 var myPieChart = new Chart(ctx, {
   type: 'doughnut',
   data: {
-    labels: ["Direct", "Referral", "Social"],
+    labels: labels,
     datasets: [{
-      data: [55, 30, 15],
-      backgroundColor: ['#4e73df', '#1cc88a', '#36b9cc'],
-      hoverBackgroundColor: ['#2e59d9', '#17a673', '#2c9faf'],
+      data: data,
+      backgroundColor: ['#4e73df', '#1cc88a', '#36b9cc', '#f6c23e', '#e74a3b'],
+      hoverBackgroundColor: ['#2e59d9', '#17a673', '#2c9faf', '#f4b731', '#e14d2a'],
       hoverBorderColor: "rgba(234, 236, 244, 1)",
     }],
   },
