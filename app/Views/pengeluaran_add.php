@@ -44,7 +44,7 @@
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item ">
+            <li class="nav-item">
                 <a class="nav-link" href="/dashboard_admin">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
@@ -59,32 +59,32 @@
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-cog"></i>
+                    <i class="fas fa-fw fa-arrow-down"></i>
                     <span>Pemasukan</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="#">Daftar Pemasukan</a>
+                        <a class="collapse-item" href="/pemasokan">Daftar Pemasukan</a>
                         <a class="collapse-item" href="/pemasokan/create">Tambah Pemasukan</a>
                     </div>
                 </div>
             </li>
 
             <!-- Nav Item - Utilities Collapse Menu -->
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
                     aria-expanded="true" aria-controls="collapseUtilities">
-                    <i class="fas fa-fw fa-wrench"></i>
+                    <i class="fas fa-fw fa-arrow-up"></i>
                     <span>Pengeluaran</span>
                 </a>
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <a class="collapse-item" href="/pengeluaran_admin">Daftar Pengeluaran</a>
-                        <a class="collapse-item" href="/pengeluaran/create">Tambah Pengeluaran</a>
+                        <a class="collapse-item" href="#">Tambah Pengeluaran</a>
                     </div>
                 </div>
             </li>
@@ -93,7 +93,7 @@
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseDaftar"
                     aria-expanded="true" aria-controls="collapseDaftar">
-                    <i class="fas fa-fw fa-table"></i>
+                    <i class="fas fa-fw fa-cart-plus"></i>
                     <span>Daftar Barang</span>
                 </a>
                 <div id="collapseDaftar" class="collapse" aria-labelledby="headingBarang"
@@ -109,7 +109,7 @@
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseProduksi"
                     aria-expanded="true" aria-controls="collapseProduksi">
-                    <i class="fas fa-fw fa-table"></i>
+                    <i class="fas fa-fw fa-rocket"></i>
                     <span>Produksi</span>
                 </a>
                 <div id="collapseProduksi" class="collapse" aria-labelledby="headingProduksi"
@@ -125,7 +125,7 @@
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePenjualan"
                     aria-expanded="true" aria-controls="collapsePenjualan">
-                    <i class="fas fa-fw fa-table"></i>
+                    <i class="fas fa-fw fa-bookmark"></i>
                     <span>Penjualan</span>
                 </a>
                 <div id="collapsePenjualan" class="collapse" aria-labelledby="headingPenjualan"
@@ -149,7 +149,7 @@
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSupplier"
                     aria-expanded="true" aria-controls="collapseSupplier">
-                    <i class="fas fa-fw fa-table"></i>
+                    <i class="fas fa-fw fa-user"></i>
                     <span>Supplier</span>
                 </a>
                 <div id="collapseSupplier" class="collapse" aria-labelledby="headingSupplier"
@@ -165,7 +165,7 @@
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePelanggan"
                     aria-expanded="true" aria-controls="collapsePelanggan">
-                    <i class="fas fa-fw fa-table"></i>
+                    <i class="fas fa-fw fa-users"></i>
                     <span>Pelanggan</span>
                 </a>
                 <div id="collapsePelanggan" class="collapse" aria-labelledby="headingPelanggan"
@@ -247,9 +247,7 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Pemasukan</h1>
-                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm"><i
-                        class="fas fa-download fa-sm text-white-50"></i> Export PDF</a>
+                        <h1 class="h3 mb-0 text-gray-800">Pengeluaran</h1>
                     </div>
 
                     <!-- Content Row -->
@@ -259,53 +257,36 @@
 <div class="col-xl-12 col-lg-7">
     <div class="card shadow mb-4">
         <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-            <h6 class="m-0 font-weight-bold text-primary">Data Pemasokan</h6>
+            <h6 class="m-0 font-weight-bold text-primary">Formulir Tambah Pengeluaran</h6>
         </div>
         <div class="card-body">
-            <div class="table-responsive">
-                <table class="table table-bordered" width="100%" cellspacing="0">
-                    <thead>
-                        <tr>
-                            <th>ID Pemasok</th>
-                            <th>Tanggal Masuk</th>
-                            <th>Kode Barang</th>
-                            <th>Nama Barang</th>
-                            <th>Barang Masuk</th>
-                            <th>Satuan</th>
-                            <th>Harga Satuan</th>
-                            <th>Total Harga</th>
-                            <th>Nama Supplier</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php if($pemasokan): ?>
-                            <?php foreach($pemasokan as $item): ?>
-                                <tr>
-                                    <td><?= $item['id_pemasok']; ?></td>
-                                    <td><?= $item['tgl_masuk']; ?></td>
-                                    <td><?= $item['kode_barang']; ?></td>
-                                    <td><?= $item['nama_barang']; ?></td>
-                                    <td><?= $item['jumlah_barang']; ?></td>
-                                    <td><?= $item['satuan']; ?></td>
-                                    <td><?= $item['harga_satuan']; ?></td>
-                                    <td><?= $item['total_harga']; ?></td>
-                                    <td><?= $item['nama_supplier']; ?></td>
-                                </tr>
-                            <?php endforeach; ?>
-                        <?php else: ?>
-                            <tr>
-                                <td colspan="9" class="text-center">No data available</td>
-                            </tr>
-                        <?php endif; ?>
-                    </tbody>
-                </table>
-            </div>
-            <div class="d-flex justify-content-center">
-                <?= $pager->links() ?>
-            </div>
+            <form action="<?= base_url('pengeluaran/store') ?>" method="post">
+                <div class="form-group">
+                    <label for="tgl_keluar">Tanggal Keluar</label>
+                    <input type="date" class="form-control" id="tgl_keluar" name="tgl_keluar" required>
+                </div>
+                <div class="form-group">
+                    <label for="kode_barang">Kode Barang</label>
+                    <input type="number" class="form-control" id="kode_barang" name="kode_barang" required>
+                </div>
+                <div class="form-group">
+                    <label for="nama_barang">Nama Barang</label>
+                    <input type="text" class="form-control" id="nama_barang" name="nama_barang" required>
+                </div>
+                <div class="form-group">
+                    <label for="jumlah_barang">Jumlah Barang</label>
+                    <input type="number" class="form-control" id="jumlah_barang" name="jumlah_barang" required>
+                </div>
+                <div class="form-group">
+                    <label for="keterangan">Keterangan</label>
+                    <textarea class="form-control" id="keterangan" name="keterangan" rows="3" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Simpan</button>
+            </form>
         </div>
     </div>
 </div>
+
                     </div>
 
                 </div>

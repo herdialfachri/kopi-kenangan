@@ -62,7 +62,7 @@
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-cog"></i>
+                    <i class="fas fa-fw fa-arrow-down"></i>
                     <span>Pemasukan</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
@@ -77,14 +77,14 @@
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
                     aria-expanded="true" aria-controls="collapseUtilities">
-                    <i class="fas fa-fw fa-wrench"></i>
+                    <i class="fas fa-fw fa-arrow-up"></i>
                     <span>Pengeluaran</span>
                 </a>
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="utilities-color.html">Daftar Pengeluaran</a>
-                        <a class="collapse-item" href="utilities-border.html">Tambah Pengeluaran</a>
+                        <a class="collapse-item" href="/pengeluaran_admin">Daftar Pengeluaran</a>
+                        <a class="collapse-item" href="/pengeluaran/create">Tambah Pengeluaran</a>
                     </div>
                 </div>
             </li>
@@ -93,7 +93,7 @@
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseDaftar"
                     aria-expanded="true" aria-controls="collapseDaftar">
-                    <i class="fas fa-fw fa-table"></i>
+                    <i class="fas fa-fw fa-cart-plus"></i>
                     <span>Daftar Barang</span>
                 </a>
                 <div id="collapseDaftar" class="collapse" aria-labelledby="headingBarang"
@@ -109,7 +109,7 @@
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseProduksi"
                     aria-expanded="true" aria-controls="collapseProduksi">
-                    <i class="fas fa-fw fa-table"></i>
+                    <i class="fas fa-fw fa-rocket"></i>
                     <span>Produksi</span>
                 </a>
                 <div id="collapseProduksi" class="collapse" aria-labelledby="headingProduksi"
@@ -125,7 +125,7 @@
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePenjualan"
                     aria-expanded="true" aria-controls="collapsePenjualan">
-                    <i class="fas fa-fw fa-table"></i>
+                    <i class="fas fa-fw fa-bookmark"></i>
                     <span>Penjualan</span>
                 </a>
                 <div id="collapsePenjualan" class="collapse" aria-labelledby="headingPenjualan"
@@ -149,7 +149,7 @@
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSupplier"
                     aria-expanded="true" aria-controls="collapseSupplier">
-                    <i class="fas fa-fw fa-table"></i>
+                    <i class="fas fa-fw fa-user"></i>
                     <span>Supplier</span>
                 </a>
                 <div id="collapseSupplier" class="collapse" aria-labelledby="headingSupplier"
@@ -165,7 +165,7 @@
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePelanggan"
                     aria-expanded="true" aria-controls="collapsePelanggan">
-                    <i class="fas fa-fw fa-table"></i>
+                    <i class="fas fa-fw fa-users"></i>
                     <span>Pelanggan</span>
                 </a>
                 <div id="collapsePelanggan" class="collapse" aria-labelledby="headingPelanggan"
