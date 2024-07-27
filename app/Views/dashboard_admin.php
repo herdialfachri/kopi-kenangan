@@ -37,7 +37,7 @@
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-smile-wink"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">Kopi DM</div>
+                <div class="sidebar-brand-text mx-3">Admin DM</div>
             </a>
 
             <!-- Divider -->
