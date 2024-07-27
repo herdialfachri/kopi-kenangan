@@ -59,7 +59,7 @@
             </div>
 
             <!-- Nav Item - Utilities Collapse Menu -->
-            <li class="nav-item">
+            <li class="nav-item ">
                 <a class="nav-link" href="/daftar_karyawan">
                     <i class="fas fa-fw fa-user"></i>
                     <span>Daftar Pekerja</span></a>

@@ -44,8 +44,8 @@
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item ">
-                <a class="nav-link" href="/dashboard_owner">
+            <li class="nav-item active">
+                <a class="nav-link" href="/dashboard_admin">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -55,21 +55,86 @@
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Karyawan
+                Barang
             </div>
 
-            <!-- Nav Item - Utilities Collapse Menu -->
-            <li class="nav-item active">
-                <a class="nav-link" href="#">
-                    <i class="fas fa-fw fa-user"></i>
-                    <span>Daftar Pekerja</span></a>
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                    aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>Pemasukan</span>
+                </a>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="buttons.html">Daftar Pemasukan</a>
+                        <a class="collapse-item" href="cards.html">Tambah Pemasukan</a>
+                    </div>
+                </div>
             </li>
 
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link" href="/tambah_karyawan">
-                    <i class="fas fa-fw fa-plus"></i>
-                    <span>Tambah Pekerja</span></a>
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
+                    aria-expanded="true" aria-controls="collapseUtilities">
+                    <i class="fas fa-fw fa-wrench"></i>
+                    <span>Pengeluaran</span>
+                </a>
+                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="utilities-color.html">Daftar Pengeluaran</a>
+                        <a class="collapse-item" href="utilities-border.html">Tambah Pengeluaran</a>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Nav Item - Barang Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseDaftar"
+                    aria-expanded="true" aria-controls="collapseDaftar">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Daftar Barang</span>
+                </a>
+                <div id="collapseDaftar" class="collapse" aria-labelledby="headingBarang"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="utilities-color.html">Daftar Barang</a>
+                        <a class="collapse-item" href="utilities-border.html">Tambah Barang</a>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Nav Item - Produksi Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseProduksi"
+                    aria-expanded="true" aria-controls="collapseProduksi">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Produksi</span>
+                </a>
+                <div id="collapseProduksi" class="collapse" aria-labelledby="headingProduksi"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="utilities-color.html">Daftar Produksi</a>
+                        <a class="collapse-item" href="utilities-border.html">Tambah Produksi</a>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Nav Item - Penjualan Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePenjualan"
+                    aria-expanded="true" aria-controls="collapsePenjualan">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Penjualan</span>
+                </a>
+                <div id="collapsePenjualan" class="collapse" aria-labelledby="headingPenjualan"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="utilities-color.html">Daftar Penjualan</a>
+                        <a class="collapse-item" href="utilities-border.html">Tambah Penjualan</a>
+                    </div>
+                </div>
             </li>
 
             <!-- Divider -->
@@ -77,36 +142,39 @@
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Keuangan
+                Relasi
             </div>
 
-            <!-- Nav Item - Pages Collapse Menu -->
+            <!-- Nav Item - Supplier Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link" href="/pengeluaran">
-                    <i class="fas fa-fw fa-arrow-up"></i>
-                    <span>Pengeluaran</span></a>
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSupplier"
+                    aria-expanded="true" aria-controls="collapseSupplier">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Supplier</span>
+                </a>
+                <div id="collapseSupplier" class="collapse" aria-labelledby="headingSupplier"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="utilities-color.html">Daftar Supplier</a>
+                        <a class="collapse-item" href="utilities-border.html">Tambah Supplier</a>
+                    </div>
+                </div>
             </li>
 
-            <!-- Nav Item - Charts -->
+            <!-- Nav Item - Pelanggan Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link" href="/pemasukan">
-                    <i class="fas fa-fw fa-arrow-down"></i>
-                    <span>Pemasukan</span></a>
-            </li>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider d-none d-md-block">
-
-            <!-- Heading -->
-            <div class="sidebar-heading">
-                Barang
-            </div>
-
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link" href="/daftar_barang">
-                    <i class="fas fa-fw fa-archive"></i>
-                    <span>Daftar Barang</span></a>
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePelanggan"
+                    aria-expanded="true" aria-controls="collapsePelanggan">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Pelanggan</span>
+                </a>
+                <div id="collapsePelanggan" class="collapse" aria-labelledby="headingPelanggan"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="/pelanggan">Daftar Pelanggan</a>
+                        <a class="collapse-item" href="/pelanggan/create">Tambah Pelanggan</a>
+                    </div>
+                </div>
             </li>
 
             <!-- Divider -->
@@ -188,83 +256,40 @@
 
                     <div class="row">
 
-                    <!-- Tabel Data Karyawan -->
-                    <div class="col-xl-9 col-lg-7">
-                        <div class="card shadow mb-4">
-                            <div
-                                class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Tabel Daftar Karyawan</h6>
-                                <div class="dropdown no-arrow"></div>
-                            </div>
-                            <div class="card-body">
-                                <div class="table-responsive">
-                                    <table class="table table-bordered" width="100%" cellspacing="0">
-                                        <thead>
-                                            <tr>
-                                                <th>ID Karyawan</th>
-                                                <th>Nama</th>
-                                                <th>Jenis Kelamin</th>
-                                                <th>Alamat</th>
-                                                <th>Nomor HP</th>
-                                                <th>Posisi</th>
-                                                <th>Gaji</th>
-                                                <th>Status</th>
-                                                <th>Opsi</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <?php if (!empty($karyawans) && is_array($karyawans)): ?>
-                                                <?php foreach($karyawans as $karyawan): ?>
-                                                    <tr>
-                                                        <td><?= esc($karyawan['id_karyawan']); ?></td>
-                                                        <td><?= esc($karyawan['nama']); ?></td>
-                                                        <td><?= esc($karyawan['jenis_kelamin']); ?></td>
-                                                        <td><?= esc($karyawan['alamat']); ?></td>
-                                                        <td><?= esc($karyawan['nomor_hp']); ?></td>
-                                                        <td><?= esc($karyawan['posisi']); ?></td>
-                                                        <td><?= esc($karyawan['gaji']); ?></td>
-                                                        <td><?= esc($karyawan['status']); ?></td>
-                                                        <td>
-                                                            <a href="<?= site_url('karyawan/edit/'.$karyawan['id_karyawan']); ?>" class="btn btn-warning btn-sm mb-2">Ubah</a>
-                                                            <a href="<?= site_url('karyawan/delete/'.$karyawan['id_karyawan']); ?>" class="btn btn-danger btn-sm mb-2" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?');">Hapus</a>
-                                                        </td>
-                                                    </tr>
-                                                <?php endforeach; ?>
-                                            <?php else: ?>
-                                                <tr>
-                                                    <td colspan="9">Tidak ada data karyawan ditemukan.</td>
-                                                </tr>
-                                            <?php endif; ?>
-                                        </tbody>
-                                    </table>
+                    <div class="col-xl-12 col-lg-7">
+                            <div class="card shadow mb-4">
+                                <!-- Card Header - Dropdown -->
+                                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold text-primary">Daftar Pelanggan</h6>
+                                </div>
+                                <!-- Card Body -->
+                                <div class="card-body">
+                                    <div class="row">
+                                        <?php if($pelanggan): ?>
+                                            <?php foreach($pelanggan as $p): ?>
+                                                <div class="col-sm-12 col-md-6 col-lg-3 mb-4">
+                                                    <div class="card h-100" style="width: 100%;">
+                                                        <div class="card-body">
+                                                            <h4 class="card-title"><?= esc($p['nama_pelanggan']); ?></h4>
+                                                        </div>
+                                                        <ul class="list-group list-group-flush">
+                                                            <li class="list-group-item">Kode Pelanggan: <?= esc($p['kode_pelanggan']); ?></li>
+                                                            <li class="list-group-item">Alamat: <?= esc($p['alamat_pelanggan']); ?></li>
+                                                            <li class="list-group-item">Kontak: <?= esc($p['kontak_pelanggan']); ?></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            <?php endforeach; ?>
+                                        <?php else: ?>
+                                            <p>No data found</p>
+                                        <?php endif; ?>
+                                    </div>
+                                    <div class="d-flex justify-content-center">
+                                        <?= $pager->links(); ?>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                    <!-- Doughnut Chart -->
-                    <div class="col-xl-3 col-lg-5">
-                        <div class="card shadow mb-4">
-                            <!-- Card Header - Dropdown -->
-                            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                <h6 class="m-0 font-weight-bold text-primary">Statistik Jumlah Karyawan</h6>
-                                <div class="dropdown no-arrow"></div>
-                            </div>
-                            <!-- Card Body -->
-                            <div class="card-body">
-                                <div class="chart-pie pt-4 pb-2">
-                                    <canvas id="myPieChart"></canvas>
-                                </div>
-                                <div class="mt-4 text-center small">
-                                    <!-- Optional: Add labels for the chart here if needed -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Hidden input to store JSON data -->
-                    <input type="hidden" id="posisiCounts" value='<?= json_encode($posisiCounts); ?>'>
-                    
                     </div>
 
                 </div>

@@ -17,7 +17,12 @@ $routes->get('/tambah_karyawan', 'KaryawanController::add_karyawan');
 $routes->get('/pengeluaran', 'KeuanganController::pengeluaran');
 $routes->get('/pemasukan', 'KeuanganController::pemasukan');
 $routes->get('/daftar_barang', 'BarangController::view_barang');
+
 $routes->get('/karyawan/edit/(:num)', 'KaryawanController::edit/$1');
 $routes->post('/karyawan/update/(:num)', 'KaryawanController::update/$1');
 $routes->get('/karyawan/delete/(:num)', 'KaryawanController::delete/$1');
 $routes->post('/karyawan/save_karyawan', 'KaryawanController::save_karyawan');
+
+$routes->get('/pelanggan', 'PelangganController::index');
+$routes->get('/pelanggan/create', 'PelangganController::create');
+$routes->post('/pelanggan/store', 'PelangganController::store');
