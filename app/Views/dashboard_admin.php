@@ -155,8 +155,8 @@
                 <div id="collapseSupplier" class="collapse" aria-labelledby="headingSupplier"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="utilities-color.html">Daftar Supplier</a>
-                        <a class="collapse-item" href="utilities-border.html">Tambah Supplier</a>
+                        <a class="collapse-item" href="/suppliers">Daftar Supplier</a>
+                        <a class="collapse-item" href="/supplier/create">Tambah Supplier</a>
                     </div>
                 </div>
             </li>
@@ -172,7 +172,7 @@
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <a class="collapse-item" href="/pelanggan">Daftar Pelanggan</a>
-                        <a class="collapse-item" href="utilities-border.html">Tambah Pelanggan</a>
+                        <a class="collapse-item" href="/pelanggan/create">Tambah Pelanggan</a>
                     </div>
                 </div>
             </li>
