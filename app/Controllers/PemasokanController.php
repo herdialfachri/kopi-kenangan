@@ -36,6 +36,7 @@ class PemasokanController extends BaseController
             'kode_barang' => $this->request->getPost('kode_barang'),
             'nama_barang' => $this->request->getPost('nama_barang'),
             'jumlah_barang' => $this->request->getPost('jumlah_barang'),
+            'total' => $this->request->getPost('total'),
             'satuan' => $this->request->getPost('satuan'),
             'harga_satuan' => $this->request->getPost('harga_satuan'),
             'total_harga' => $this->request->getPost('harga_satuan') * $this->request->getPost('jumlah_barang'),
