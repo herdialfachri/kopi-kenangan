@@ -74,7 +74,7 @@
             </li>
 
             <!-- Nav Item - Utilities Collapse Menu -->
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
                     aria-expanded="true" aria-controls="collapseUtilities">
                     <i class="fas fa-fw fa-arrow-up"></i>
@@ -101,6 +101,7 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <a class="collapse-item" href="/barang">Daftar Barang</a>
                         <a class="collapse-item" href="#">Tambah Barang</a>
+                        <a class="collapse-item" href="/barang/total">Total</a>
                     </div>
                 </div>
             </li>

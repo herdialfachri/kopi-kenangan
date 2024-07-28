@@ -74,7 +74,7 @@
             </li>
 
             <!-- Nav Item - Utilities Collapse Menu -->
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
                     aria-expanded="true" aria-controls="collapseUtilities">
                     <i class="fas fa-fw fa-arrow-up"></i>
@@ -100,7 +100,8 @@
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <a class="collapse-item" href="/barang">Daftar Barang</a>
-                        <a class="collapse-item" href="#">Tambah Barang</a>
+                        <a class="collapse-item" href="/barang/create">Tambah Barang</a>
+                        <a class="collapse-item" href="#">Total</a>
                     </div>
                 </div>
             </li>
@@ -256,36 +257,39 @@
 
 <div class="col-xl-12 col-lg-7">
     <div class="card shadow mb-4">
-        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-            <h6 class="m-0 font-weight-bold text-primary">Formulir Tambah Barang</h6>
-        </div>
-        <div class="card-body">
-            <form action="<?= base_url('barang/store') ?>" method="post">
-                <div class="form-group">
-                    <label for="kode_barang">Kode Barang</label>
-                    <input type="number" class="form-control" id="kode_barang" name="kode_barang" required>
-                </div>
-                <div class="form-group">
-                    <label for="nama_barang">Nama Barang</label>
-                    <input type="text" class="form-control" id="nama_barang" name="nama_barang" required>
-                </div>
-                <div class="form-group">
-                    <label for="kategori_barang">Kategori Barang</label>
-                    <input type="text" class="form-control" id="kategori_barang" name="kategori_barang" required>
-                </div>
-                <div class="form-group">
-                    <label for="harga_satuan">Harga Satuan</label>
-                    <input type="number" class="form-control" id="harga_satuan" name="harga_satuan" required>
-                </div>
-                <div class="form-group">
-                    <label for="satuan">Satuan</label>
-                    <input type="text" class="form-control" id="satuan" name="satuan" required>
-                </div>
-                <button type="submit" class="btn btn-primary">Simpan</button>
-            </form>
+            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                <h6 class="m-0 font-weight-bold text-primary">Total Stok Barang</h6>
+            </div>
+            <div class="card-body">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Kode Barang</th>
+                            <th>Nama Barang</th>
+                            <th>Total Stok</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php if (isset($total_stok) && !empty($total_stok)): ?>
+                            <?php foreach ($total_stok as $stok): ?>
+                                <tr>
+                                    <td><?= $stok['kode_barang'] ?></td>
+                                    <td><?= $stok['nama_barang'] ?></td>
+                                    <td><?= $stok['total_stok'] ?></td>
+                                </tr>
+                            <?php endforeach; ?>
+                        <?php else: ?>
+                            <tr>
+                                <td colspan="3" class="text-center">Data tidak tersedia</td>
+                            </tr>
+                        <?php endif; ?>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
-</div>
+
+
 
                     </div>
 

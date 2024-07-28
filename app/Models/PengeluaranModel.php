@@ -7,7 +7,18 @@ use CodeIgniter\Model;
 class PengeluaranModel extends Model
 {
     protected $table = 'pengeluaran_dm';
-    protected $primaryKey = 'id_pengeluaran';
-    protected $allowedFields = ['tgl_keluar', 'kode_barang', 'nama_barang', 'jumlah_barang', 'keterangan', 'satuan'];
+    protected $allowedFields = ['id_pengeluaran', 'tgl_keluar', 'kode_barang', 'nama_barang', 'jumlah_barang', 'keterangan', 'satuan'];
+
+    public function updateTotalStok($kode_barang, $jumlah_barang)
+    {
+        $db = \Config\Database::connect();
+        $totalStokModel = new \App\Models\TotalStokModel();
+        
+        $totalStok = $totalStokModel->where('kode_barang', $kode_barang)->first();
+        
+        if ($totalStok) {
+            $totalStok['total_stok'] -= $jumlah_barang;
+            $totalStokModel->save($totalStok);
+        }
+    }
 }
- 

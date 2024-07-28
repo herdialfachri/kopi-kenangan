@@ -101,6 +101,7 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <a class="collapse-item" href="utilities-color.html">Daftar Barang</a>
                         <a class="collapse-item" href="utilities-border.html">Tambah Barang</a>
+                        <a class="collapse-item" href="/barang/total">Total</a>
                     </div>
                 </div>
             </li>
