@@ -30,6 +30,11 @@ class BarangController extends BaseController
         return view('barang_add');
     }
 
+    public function total()
+    {
+        return view('barang_total');
+    }
+
     public function store()
     {
         $model = new BarangModel();

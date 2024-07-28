@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\PemasokanModel;
+use App\Models\BarangModel;
 
 class PemasokanController extends BaseController
 {
@@ -23,7 +24,10 @@ class PemasokanController extends BaseController
 
     public function create()
     {
-        return view('pemasukan_add');
+        $barangModel = new BarangModel();
+        $data['barangs'] = $barangModel->getAllBarang();
+        
+        return view('pemasukan_add', $data);
     }
 
     public function store()
@@ -36,7 +40,6 @@ class PemasokanController extends BaseController
             'kode_barang' => $this->request->getPost('kode_barang'),
             'nama_barang' => $this->request->getPost('nama_barang'),
             'jumlah_barang' => $this->request->getPost('jumlah_barang'),
-            'total' => $this->request->getPost('total'),
             'satuan' => $this->request->getPost('satuan'),
             'harga_satuan' => $this->request->getPost('harga_satuan'),
             'total_harga' => $this->request->getPost('harga_satuan') * $this->request->getPost('jumlah_barang'),

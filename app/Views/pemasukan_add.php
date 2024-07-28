@@ -99,8 +99,8 @@
                 <div id="collapseDaftar" class="collapse" aria-labelledby="headingBarang"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="utilities-color.html">Daftar Barang</a>
-                        <a class="collapse-item" href="utilities-border.html">Tambah Barang</a>
+                        <a class="collapse-item" href="/barang">Daftar Barang</a>
+                        <a class="collapse-item" href="/barang/create">Tambah Barang</a>
                     </div>
                 </div>
             </li>
@@ -254,48 +254,93 @@
 
                     <div class="row">
 
-                        <div class="col-xl-12 col-lg-7">
-                            <div class="card shadow mb-4">
-                                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Formulir Tambah Pemasokan</h6>
-                                </div>
-                                <div class="card-body">
-                                    <form action="<?= site_url('pemasokan/store'); ?>" method="post">
-                                        <div class="form-group">
-                                            <label for="tgl_masuk">Tanggal Masuk</label>
-                                            <input type="date" class="form-control" id="tgl_masuk" name="tgl_masuk" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="kode_barang">Kode Barang</label>
-                                            <input type="number" class="form-control" id="kode_barang" name="kode_barang" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="nama_barang">Nama Barang</label>
-                                            <input type="text" class="form-control" id="nama_barang" name="nama_barang" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="jumlah_barang">Jumlah Barang</label>
-                                            <input type="number" class="form-control" id="jumlah_barang" name="jumlah_barang" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="satuan">Satuan</label>
-                                            <input type="text" class="form-control" id="satuan" name="satuan" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="harga_satuan">Harga Satuan</label>
-                                            <input type="number" class="form-control" id="harga_satuan" name="harga_satuan" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="nama_supplier">Nama Supplier</label>
-                                            <input type="text" class="form-control" id="nama_supplier" name="nama_supplier" required>
-                                        </div>
-                                        <div class="d-flex justify-content-end">
-                                            <button type="submit" class="btn btn-primary mb-2">Tambah Data Pemasokan</button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
+<div class="col-xl-12 col-lg-7">
+    <div class="card shadow mb-4">
+        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+            <h6 class="m-0 font-weight-bold text-primary">Formulir Tambah Pemasokan</h6>
+        </div>
+        <div class="card-body">
+            <form action="<?= site_url('pemasokan/store'); ?>" method="post">
+                <div class="form-group">
+                    <label for="tgl_masuk">Tanggal Masuk</label>
+                    <input type="date" class="form-control" id="tgl_masuk" name="tgl_masuk" required>
+                </div>
+                <div class="form-group">
+                    <label for="kode_barang">Kode Barang</label>
+                    <select class="form-control" id="kode_barang" name="kode_barang" required onchange="updateNamaBarang()">
+                        <?php foreach ($barangs as $barang): ?>
+                            <option value="<?= $barang['kode_barang']; ?>" data-nama="<?= $barang['nama_barang']; ?>"><?= $barang['kode_barang']; ?></option>
+                        <?php endforeach; ?>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="nama_barang">Nama Barang</label>
+                    <input type="text" class="form-control" id="nama_barang" name="nama_barang" required readonly>
+                </div>
+                <div class="form-group">
+                    <label for="jumlah_barang">Jumlah Barang</label>
+                    <input type="number" class="form-control" id="jumlah_barang" name="jumlah_barang" required>
+                </div>
+                <div class="form-group">
+                    <label for="satuan">Satuan</label>
+                    <select class="form-control" id="satuan" name="satuan" required>
+                        <option value="Kg">Kg</option>
+                        <option value="Pcs">Pcs</option>
+                        <option value="Ton">Ton</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="harga_satuan">Harga Satuan</label>
+                    <input type="number" class="form-control" id="harga_satuan" name="harga_satuan" required>
+                </div>
+                <div class="form-group">
+                    <label for="nama_supplier">Nama Supplier</label>
+                    <input type="text" class="form-control" id="nama_supplier" name="nama_supplier" required>
+                </div>
+                <div class="d-flex justify-content-end">
+                    <button type="submit" class="btn btn-primary mb-2">Tambah Data Pemasokan</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+function updateNamaBarang() {
+    var kodeBarang = document.getElementById('kode_barang').value;
+    var namaBarang = '';
+
+    switch(kodeBarang) {
+        case '100':
+            namaBarang = 'Biji Kopi';
+            break;
+        case '200':
+            namaBarang = 'Gula Pasir';
+            break;
+        case '300':
+            namaBarang = 'Creamer Bubuk';
+            break;
+        case '400':
+            namaBarang = 'Kopi Sachet';
+            break;
+        default:
+            var selectedOption = document.querySelector('#kode_barang option[value="' + kodeBarang + '"]');
+            if (selectedOption) {
+                namaBarang = selectedOption.getAttribute('data-nama');
+            }
+            break;
+    }
+
+    document.getElementById('nama_barang').value = namaBarang;
+}
+
+// Memanggil fungsi untuk set nilai awal
+document.addEventListener('DOMContentLoaded', function() {
+    updateNamaBarang();
+});
+</script>
+
+
                     </div>
 
                 </div>

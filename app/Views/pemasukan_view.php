@@ -99,8 +99,8 @@
                 <div id="collapseDaftar" class="collapse" aria-labelledby="headingBarang"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="utilities-color.html">Daftar Barang</a>
-                        <a class="collapse-item" href="utilities-border.html">Tambah Barang</a>
+                        <a class="collapse-item" href="/barang">Daftar Barang</a>
+                        <a class="collapse-item" href="/barang/create">Tambah Barang</a>
                     </div>
                 </div>
             </li>

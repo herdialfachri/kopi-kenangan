@@ -10,3 +10,4 @@ class PengeluaranModel extends Model
     protected $primaryKey = 'id_pengeluaran';
     protected $allowedFields = ['tgl_keluar', 'kode_barang', 'nama_barang', 'jumlah_barang', 'keterangan', 'satuan'];
 }
+ 

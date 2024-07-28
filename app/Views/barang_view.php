@@ -269,8 +269,6 @@
                             <th>Kategori Barang</th>
                             <th>Harga Satuan</th>
                             <th>Satuan</th>
-                            <th>Stok Awal</th>
-                            <th>Stok Sekarang</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -282,13 +280,11 @@
                                     <td><?= $item['kategori_barang']; ?></td>
                                     <td><?= $item['harga_satuan']; ?></td>
                                     <td><?= $item['satuan']; ?></td>
-                                    <td><?= $item['stok_awal']; ?></td>
-                                    <td><?= $item['stok_sekarang']; ?></td>
                                 </tr>
                             <?php endforeach; ?>
                         <?php else: ?>
                             <tr>
-                                <td colspan="8" class="text-center">No data available</td>
+                                <td colspan="6" class="text-center">No data available</td>
                             </tr>
                         <?php endif; ?>
                     </tbody>

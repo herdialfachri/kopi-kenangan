@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\PengeluaranModel;
+use App\Models\BarangModel;
 
 class PengeluaranController extends BaseController
 {
@@ -22,8 +23,11 @@ class PengeluaranController extends BaseController
     }
 
     public function create()
-    {
-        return view('pengeluaran_add');
+    { 
+        $barangModel = new BarangModel();
+        $data['barangs'] = $barangModel->getAllBarang();
+        
+        return view('pengeluaran_add', $data);
     }
 
     // Menyimpan data ke database
@@ -38,6 +42,7 @@ class PengeluaranController extends BaseController
             'nama_barang' => $this->request->getPost('nama_barang'),
             'jumlah_barang' => $this->request->getPost('jumlah_barang'),
             'keterangan' => $this->request->getPost('keterangan'),
+            'satuan' => $this->request->getPost('satuan'),
         ];
 
         // Simpan data

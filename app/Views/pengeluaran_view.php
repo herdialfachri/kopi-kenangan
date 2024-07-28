@@ -99,8 +99,8 @@
                 <div id="collapseDaftar" class="collapse" aria-labelledby="headingBarang"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="utilities-color.html">Daftar Barang</a>
-                        <a class="collapse-item" href="utilities-border.html">Tambah Barang</a>
+                        <a class="collapse-item" href="/barang">Daftar Barang</a>
+                        <a class="collapse-item" href="/barang/create">Tambah Barang</a>
                     </div>
                 </div>
             </li>
@@ -257,7 +257,7 @@
 
                     <div class="row">
 
-                    <div class="col-xl-12 col-lg-7">
+<div class="col-xl-12 col-lg-7">
     <div class="card shadow mb-4">
         <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
             <h6 class="m-0 font-weight-bold text-primary">Data Pengeluaran</h6>

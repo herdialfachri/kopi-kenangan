@@ -16,7 +16,7 @@ $routes->get('/daftar_karyawan', 'KaryawanController::daftarkaryawan');
 $routes->get('/tambah_karyawan', 'KaryawanController::add_karyawan');
 $routes->get('/pengeluaran', 'KeuanganController::pengeluaran');
 $routes->get('/pemasukan', 'KeuanganController::pemasukan');
-$routes->get('/daftar_barang', 'BarangController::view_barang');
+$routes->get('/daftar_barang', 'BarangController::view_barang'); 
  
 $routes->get('/karyawan/edit/(:num)', 'KaryawanController::edit/$1');
 $routes->post('/karyawan/update/(:num)', 'KaryawanController::update/$1');
@@ -40,6 +40,7 @@ $routes->get('/pengeluaran/create', 'PengeluaranController::create');
 $routes->post('/pengeluaran/store', 'PengeluaranController::save');
 
 $routes->get('/barang', 'BarangController::index');
+$routes->get('/barang/total', 'BarangController::total');
 $routes->get('/barang/create', 'BarangController::create');
 $routes->post('/barang/store', 'BarangController::store');
 
