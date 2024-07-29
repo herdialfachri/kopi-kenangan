@@ -43,10 +43,56 @@ class PemasokanController extends BaseController
             'satuan' => $this->request->getPost('satuan'),
             'harga_satuan' => $this->request->getPost('harga_satuan'),
             'total_harga' => $this->request->getPost('harga_satuan') * $this->request->getPost('jumlah_barang'),
-            'nama_supplier' => $this->request->getPost('nama_supplier')
+            'nama_supplier' => $this->request->getPost('nama_supplier'),
+            'kategori_barang' => $this->request->getPost('kategori_barang'),
         ];
 
         $model->insert($data);
+        $model->updateTotalStok($this->request->getPost('kode_barang'), $this->request->getPost('jumlah_barang'), $this->request->getPost('kategori_barang'));
+
+        return redirect()->to('/pemasokan');
+    }
+
+    public function edit($id)
+    {
+        $model = new PemasokanModel();
+        $barangModel = new BarangModel();
+
+        // Fetch the data to be edited using 'id_pemasok'
+        $data['pemasokan'] = $model->where('id_pemasok', $id)->first();
+        $data['barangs'] = $barangModel->getAllBarang();
+
+        return view('pemasukan_edit', $data);
+    }
+
+    public function update($id)
+    {
+        $model = new PemasokanModel();
+
+        // Fetch the old data
+        $oldData = $model->where('id_pemasok', $id)->first();
+
+        $data = [
+            'tgl_masuk' => $this->request->getPost('tgl_masuk'),
+            'kode_barang' => $this->request->getPost('kode_barang'),
+            'nama_barang' => $this->request->getPost('nama_barang'),
+            'jumlah_barang' => $this->request->getPost('jumlah_barang'),
+            'satuan' => $this->request->getPost('satuan'),
+            'harga_satuan' => $this->request->getPost('harga_satuan'),
+            'total_harga' => $this->request->getPost('harga_satuan') * $this->request->getPost('jumlah_barang'),
+            'nama_supplier' => $this->request->getPost('nama_supplier'),
+            'kategori_barang' => $this->request->getPost('kategori_barang'),
+        ];
+
+        // Update the data in the database without changing 'id_pemasok'
+        $model->update($id, $data);
+
+        // Update the stock by comparing the new and old quantity
+        $model->updateTotalStok(
+            $this->request->getPost('kode_barang'),
+            $this->request->getPost('jumlah_barang') - $oldData['jumlah_barang'],
+            $this->request->getPost('kategori_barang')
+        );
 
         return redirect()->to('/pemasokan');
     }

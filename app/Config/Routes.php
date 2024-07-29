@@ -34,6 +34,8 @@ $routes->post('/supplier/store', 'SupplierController::store');
 $routes->get('/pemasokan', 'PemasokanController::index');
 $routes->get('/pemasokan/create', 'PemasokanController::create');
 $routes->post('/pemasokan/store', 'StokController::addPemasokan');
+$routes->get('pemasokan/edit/(:num)', 'PemasokanController::edit/$1');
+$routes->post('pemasokan/update/(:num)', 'PemasokanController::update/$1');
 
 $routes->get('/pengeluaran_admin', 'PengeluaranController::index');
 $routes->get('/pengeluaran/create', 'PengeluaranController::create');

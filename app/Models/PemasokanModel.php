@@ -7,7 +7,20 @@ use CodeIgniter\Model;
 class PemasokanModel extends Model
 {
     protected $table = 'pemasokan_dm';
-    protected $allowedFields = ['id_pemasok', 'tgl_masuk', 'kode_barang', 'nama_barang', 'jumlah_barang', 'harga_satuan', 'satuan', 'total_harga', 'nama_supplier', 'kategori_barang'];
+    protected $primaryKey = 'id_pemasok';
+
+    protected $allowedFields = [
+        'id_pemasok',
+        'tgl_masuk',
+        'kode_barang',
+        'nama_barang',
+        'jumlah_barang',
+        'satuan',
+        'harga_satuan',
+        'total_harga',
+        'nama_supplier',
+        'kategori_barang'
+    ];
 
     public function updateTotalStok($kode_barang, $jumlah_barang, $kategori_barang)
     {
