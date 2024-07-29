@@ -217,6 +217,7 @@
                                                     <th>Satuan</th>
                                                     <th>Keterangan</th>
                                                     <th>Kategori</th>
+                                                    <th>Aksi</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -231,6 +232,11 @@
                                                             <td><?= $item['satuan']; ?></td>
                                                             <td><?= $item['keterangan']; ?></td>
                                                             <td><?= $item['kategori_barang']; ?></td>
+                                                            <td>
+                                                                <a href="<?= base_url('pengeluaran/edit/' . $item['id_pengeluaran']); ?>" class="btn btn-warning btn-sm">
+                                                                    <i class="fas fa-edit"></i>
+                                                                </a>
+                                                            </td>
                                                         </tr>
                                                     <?php endforeach; ?>
                                                 <?php else : ?>
