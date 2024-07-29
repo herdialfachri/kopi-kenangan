@@ -45,7 +45,7 @@
             <li class="nav-item ">
                 <a class="nav-link" href="/dashboard_admin">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
+                    <span>Beranda</span></a>
             </li>
 
             <!-- Divider -->
@@ -99,34 +99,6 @@
                 </div>
             </li>
 
-            <!-- Nav Item - Produksi Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseProduksi" aria-expanded="true" aria-controls="collapseProduksi">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Produksi</span>
-                </a>
-                <div id="collapseProduksi" class="collapse" aria-labelledby="headingProduksi" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="utilities-color.html">Daftar Produksi</a>
-                        <a class="collapse-item" href="utilities-border.html">Tambah Produksi</a>
-                    </div>
-                </div>
-            </li>
-
-            <!-- Nav Item - Penjualan Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePenjualan" aria-expanded="true" aria-controls="collapsePenjualan">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Penjualan</span>
-                </a>
-                <div id="collapsePenjualan" class="collapse" aria-labelledby="headingPenjualan" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="utilities-color.html">Daftar Penjualan</a>
-                        <a class="collapse-item" href="utilities-border.html">Tambah Penjualan</a>
-                    </div>
-                </div>
-            </li>
-
             <!-- Divider -->
             <hr class="sidebar-divider">
 
@@ -138,7 +110,7 @@
             <!-- Nav Item - Supplier Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSupplier" aria-expanded="true" aria-controls="collapseSupplier">
-                    <i class="fas fa-fw fa-table"></i>
+                    <i class="fas fa-fw fa-user"></i>
                     <span>Supplier</span>
                 </a>
                 <div id="collapseSupplier" class="collapse" aria-labelledby="headingSupplier" data-parent="#accordionSidebar">
@@ -150,9 +122,9 @@
             </li>
 
             <!-- Nav Item - Pelanggan Collapse Menu -->
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePelanggan" aria-expanded="true" aria-controls="collapsePelanggan">
-                    <i class="fas fa-fw fa-table"></i>
+                    <i class="fas fa-fw fa-users"></i>
                     <span>Pelanggan</span>
                 </a>
                 <div id="collapsePelanggan" class="collapse" aria-labelledby="headingPelanggan" data-parent="#accordionSidebar">

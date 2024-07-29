@@ -45,7 +45,7 @@
             <li class="nav-item active">
                 <a class="nav-link" href="#">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
+                    <span>Beranda</span></a>
             </li>
 
             <!-- Divider -->
@@ -95,34 +95,6 @@
                         <a class="collapse-item" href="/barang">Daftar Barang</a>
                         <a class="collapse-item" href="/barang/create">Tambah Barang</a>
                         <a class="collapse-item" href="/barang/total">Total</a>
-                    </div>
-                </div>
-            </li>
-
-            <!-- Nav Item - Produksi Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseProduksi" aria-expanded="true" aria-controls="collapseProduksi">
-                    <i class="fas fa-fw fa-rocket"></i>
-                    <span>Produksi</span>
-                </a>
-                <div id="collapseProduksi" class="collapse" aria-labelledby="headingProduksi" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="utilities-color.html">Daftar Produksi</a>
-                        <a class="collapse-item" href="utilities-border.html">Tambah Produksi</a>
-                    </div>
-                </div>
-            </li>
-
-            <!-- Nav Item - Penjualan Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePenjualan" aria-expanded="true" aria-controls="collapsePenjualan">
-                    <i class="fas fa-fw fa-bookmark"></i>
-                    <span>Penjualan</span>
-                </a>
-                <div id="collapsePenjualan" class="collapse" aria-labelledby="headingPenjualan" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="utilities-color.html">Daftar Penjualan</a>
-                        <a class="collapse-item" href="utilities-border.html">Tambah Penjualan</a>
                     </div>
                 </div>
             </li>
