@@ -40,6 +40,9 @@ $routes->post('pemasokan/update/(:num)', 'PemasokanController::update/$1');
 $routes->get('/pengeluaran_admin', 'PengeluaranController::index');
 $routes->get('/pengeluaran/create', 'PengeluaranController::create');
 $routes->post('/pengeluaran/store', 'StokController::addPengeluaran');
+$routes->get('/pengeluaran/edit/(:num)', 'PengeluaranController::edit/$1');
+$routes->post('/pengeluaran/update/(:num)', 'PengeluaranController::update/$1');
+
 
 $routes->get('/barang', 'BarangController::index');
 $routes->get('/barang/create', 'BarangController::create');
