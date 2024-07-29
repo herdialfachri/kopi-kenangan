@@ -54,10 +54,12 @@ class StokController extends BaseController
             'satuan' => $this->request->getPost('satuan'),
             'kategori_barang' => $this->request->getPost('kategori_barang')
         ];
-
+    
         $this->pengeluaranModel->save($data);
-        $this->pengeluaranModel->updateTotalStok($data['kode_barang'], $data['jumlah_barang'], $data['kategori_barang']);
-
+        // Tambahkan jumlahBarangOld jika diperlukan
+        $jumlahBarangOld = 0; // Atur ini sesuai dengan kebutuhan Anda
+        $this->pengeluaranModel->updateTotalStok($data['kode_barang'], $data['jumlah_barang'], $data['kategori_barang'], $jumlahBarangOld, $data['nama_barang']);
+    
         return redirect()->to('/pengeluaran_admin'); // Redirect ke halaman yang sesuai
     }
 

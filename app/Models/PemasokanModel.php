@@ -15,7 +15,7 @@ class PemasokanModel extends Model
         'kode_barang',
         'nama_barang',
         'jumlah_barang',
-        'satuan',
+        'satuan', 
         'harga_satuan',
         'total_harga',
         'nama_supplier',
