@@ -13,9 +13,7 @@
 
     <!-- Custom fonts for this template-->
     <link href="<?= base_url('admin/vendor/fontawesome-free/css/all.min.css'); ?>" rel="stylesheet" type="text/css">
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
     <!-- Custom styles for this template-->
     <link href="<?= base_url('admin/css/sb-admin-2.min.css'); ?>" rel="stylesheet">
@@ -60,8 +58,7 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-                    aria-expanded="true" aria-controls="collapseTwo">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-arrow-down"></i>
                     <span>Pemasukan</span>
                 </a>
@@ -75,13 +72,11 @@
 
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item active">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
-                    aria-expanded="true" aria-controls="collapseUtilities">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
                     <i class="fas fa-fw fa-arrow-up"></i>
                     <span>Pengeluaran</span>
                 </a>
-                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
-                    data-parent="#accordionSidebar">
+                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <a class="collapse-item" href="/pengeluaran_admin">Daftar Pengeluaran</a>
                         <a class="collapse-item" href="#">Tambah Pengeluaran</a>
@@ -91,13 +86,11 @@
 
             <!-- Nav Item - Barang Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseDaftar"
-                    aria-expanded="true" aria-controls="collapseDaftar">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseDaftar" aria-expanded="true" aria-controls="collapseDaftar">
                     <i class="fas fa-fw fa-cart-plus"></i>
                     <span>Daftar Barang</span>
                 </a>
-                <div id="collapseDaftar" class="collapse" aria-labelledby="headingBarang"
-                    data-parent="#accordionSidebar">
+                <div id="collapseDaftar" class="collapse" aria-labelledby="headingBarang" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <a class="collapse-item" href="/barang">Daftar Barang</a>
                         <a class="collapse-item" href="/barang/create">Tambah Barang</a>
@@ -108,13 +101,11 @@
 
             <!-- Nav Item - Produksi Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseProduksi"
-                    aria-expanded="true" aria-controls="collapseProduksi">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseProduksi" aria-expanded="true" aria-controls="collapseProduksi">
                     <i class="fas fa-fw fa-rocket"></i>
                     <span>Produksi</span>
                 </a>
-                <div id="collapseProduksi" class="collapse" aria-labelledby="headingProduksi"
-                    data-parent="#accordionSidebar">
+                <div id="collapseProduksi" class="collapse" aria-labelledby="headingProduksi" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <a class="collapse-item" href="utilities-color.html">Daftar Produksi</a>
                         <a class="collapse-item" href="utilities-border.html">Tambah Produksi</a>
@@ -124,13 +115,11 @@
 
             <!-- Nav Item - Penjualan Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePenjualan"
-                    aria-expanded="true" aria-controls="collapsePenjualan">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePenjualan" aria-expanded="true" aria-controls="collapsePenjualan">
                     <i class="fas fa-fw fa-bookmark"></i>
                     <span>Penjualan</span>
                 </a>
-                <div id="collapsePenjualan" class="collapse" aria-labelledby="headingPenjualan"
-                    data-parent="#accordionSidebar">
+                <div id="collapsePenjualan" class="collapse" aria-labelledby="headingPenjualan" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <a class="collapse-item" href="utilities-color.html">Daftar Penjualan</a>
                         <a class="collapse-item" href="utilities-border.html">Tambah Penjualan</a>
@@ -148,13 +137,11 @@
 
             <!-- Nav Item - Supplier Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSupplier"
-                    aria-expanded="true" aria-controls="collapseSupplier">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSupplier" aria-expanded="true" aria-controls="collapseSupplier">
                     <i class="fas fa-fw fa-user"></i>
                     <span>Supplier</span>
                 </a>
-                <div id="collapseSupplier" class="collapse" aria-labelledby="headingSupplier"
-                    data-parent="#accordionSidebar">
+                <div id="collapseSupplier" class="collapse" aria-labelledby="headingSupplier" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <a class="collapse-item" href="/suppliers">Daftar Supplier</a>
                         <a class="collapse-item" href="/supplier/create">Tambah Supplier</a>
@@ -164,13 +151,11 @@
 
             <!-- Nav Item - Pelanggan Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePelanggan"
-                    aria-expanded="true" aria-controls="collapsePelanggan">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePelanggan" aria-expanded="true" aria-controls="collapsePelanggan">
                     <i class="fas fa-fw fa-users"></i>
                     <span>Pelanggan</span>
                 </a>
-                <div id="collapsePelanggan" class="collapse" aria-labelledby="headingPelanggan"
-                    data-parent="#accordionSidebar">
+                <div id="collapsePelanggan" class="collapse" aria-labelledby="headingPelanggan" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <a class="collapse-item" href="/pelanggan">Daftar Pelanggan</a>
                         <a class="collapse-item" href="/pelanggan/create">Tambah Pelanggan</a>
@@ -208,16 +193,14 @@
 
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
-                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="mr-2 d-none d-lg-inline text-gray-600">
-                               Hi, <?= session()->get('nama_pengguna'); ?>
-                            </span>
-                            <img class="img-profile rounded-circle" src="<?= base_url('admin/img/undraw_profile.svg'); ?>">
-                        </a>
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600">
+                                    Hi, <?= session()->get('nama_pengguna'); ?>
+                                </span>
+                                <img class="img-profile rounded-circle" src="<?= base_url('admin/img/undraw_profile.svg'); ?>">
+                            </a>
                             <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="userDropdown">
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                                 <a class="dropdown-item" href="#">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Profile
@@ -255,87 +238,87 @@
 
                     <div class="row">
 
-<div class="col-xl-12 col-lg-7">
-    <div class="card shadow mb-4">
-        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-            <h6 class="m-0 font-weight-bold text-primary">Formulir Tambah Pengeluaran</h6>
-        </div>
-        <div class="card-body">
-            <form action="<?= site_url('pengeluaran/store'); ?>" method="post">
-                <div class="form-group">
-                    <label for="tgl_keluar">Tanggal Keluar</label>
-                    <input type="date" class="form-control" id="tgl_keluar" name="tgl_keluar" required>
-                </div>
-                <div class="form-group">
-                    <label for="kode_barang">Kode Barang</label>
-                    <select class="form-control" id="kode_barang" name="kode_barang" required onchange="updateNamaBarang()">
-                        <?php foreach ($barangs as $barang): ?>
-                            <option value="<?= $barang['kode_barang']; ?>" data-nama="<?= $barang['nama_barang']; ?>"><?= $barang['kode_barang']; ?></option>
-                        <?php endforeach; ?>
-                    </select>
-                </div> 
-                <div class="form-group">
-                    <label for="nama_barang">Nama Barang</label>
-                    <input type="text" class="form-control" id="nama_barang" name="nama_barang" required readonly>
-                </div>
-                <div class="form-group">
-                    <label for="jumlah_barang">Jumlah Barang</label>
-                    <input type="number" class="form-control" id="jumlah_barang" name="jumlah_barang" required>
-                </div>
-                <div class="form-group">
-                    <label for="keterangan">Keterangan</label>
-                    <textarea class="form-control" id="keterangan" name="keterangan" required></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="satuan">Satuan</label>
-                    <select class="form-control" id="satuan" name="satuan" required>
-                        <option value="Kg">Kg</option>
-                        <option value="Pcs">Pcs</option>
-                        <option value="Ton">Ton</option>
-                    </select>
-                </div>
-                <div class="d-flex justify-content-end">
-                    <button type="submit" class="btn btn-primary mb-2">Tambah Data Pengeluaran</button>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
+                        <div class="col-xl-12 col-lg-7">
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold text-primary">Formulir Tambah Pengeluaran</h6>
+                                </div>
+                                <div class="card-body">
+                                    <form action="<?= site_url('pengeluaran/store'); ?>" method="post">
+                                        <div class="form-group">
+                                            <label for="tgl_keluar">Tanggal Keluar</label>
+                                            <input type="date" class="form-control" id="tgl_keluar" name="tgl_keluar" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="kode_barang">Kode Barang</label>
+                                            <select class="form-control" id="kode_barang" name="kode_barang" required onchange="updateNamaBarang()">
+                                                <?php foreach ($barangs as $barang) : ?>
+                                                    <option value="<?= $barang['kode_barang']; ?>" data-nama="<?= $barang['nama_barang']; ?>"><?= $barang['kode_barang']; ?></option>
+                                                <?php endforeach; ?>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="nama_barang">Nama Barang</label>
+                                            <input type="text" class="form-control" id="nama_barang" name="nama_barang" required readonly>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="jumlah_barang">Jumlah Barang</label>
+                                            <input type="number" class="form-control" id="jumlah_barang" name="jumlah_barang" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="keterangan">Keterangan</label>
+                                            <textarea class="form-control" id="keterangan" name="keterangan" required></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="satuan">Satuan</label>
+                                            <select class="form-control" id="satuan" name="satuan" required>
+                                                <option value="Kg">Kg</option>
+                                                <option value="Pcs">Pcs</option>
+                                                <option value="Ton">Ton</option>
+                                            </select>
+                                        </div>
+                                        <div class="d-flex justify-content-end">
+                                            <button type="submit" class="btn btn-primary mb-2">Tambah Data Pengeluaran</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
 
-<script>
-function updateNamaBarang() {
-    var kodeBarang = document.getElementById('kode_barang').value;
-    var namaBarang = '';
+                        <script>
+                            function updateNamaBarang() {
+                                var kodeBarang = document.getElementById('kode_barang').value;
+                                var namaBarang = '';
 
-    switch(kodeBarang) {
-        case '100':
-            namaBarang = 'Biji Kopi';
-            break;
-        case '200':
-            namaBarang = 'Gula Pasir';
-            break;
-        case '300':
-            namaBarang = 'Creamer Bubuk';
-            break;
-        case '400':
-            namaBarang = 'Kopi Sachet';
-            break;
-        default:
-            var selectedOption = document.querySelector('#kode_barang option[value="' + kodeBarang + '"]');
-            if (selectedOption) {
-                namaBarang = selectedOption.getAttribute('data-nama');
-            }
-            break;
-    }
+                                switch (kodeBarang) {
+                                    case '100':
+                                        namaBarang = 'Biji Kopi';
+                                        break;
+                                    case '200':
+                                        namaBarang = 'Gula Pasir';
+                                        break;
+                                    case '300':
+                                        namaBarang = 'Creamer Bubuk';
+                                        break;
+                                    case '400':
+                                        namaBarang = 'Kopi Sachet';
+                                        break;
+                                    default:
+                                        var selectedOption = document.querySelector('#kode_barang option[value="' + kodeBarang + '"]');
+                                        if (selectedOption) {
+                                            namaBarang = selectedOption.getAttribute('data-nama');
+                                        }
+                                        break;
+                                }
 
-    document.getElementById('nama_barang').value = namaBarang;
-}
+                                document.getElementById('nama_barang').value = namaBarang;
+                            }
 
-// Memanggil fungsi untuk set nilai awal
-document.addEventListener('DOMContentLoaded', function() {
-    updateNamaBarang();
-});
-</script>
+                            // Memanggil fungsi untuk set nilai awal
+                            document.addEventListener('DOMContentLoaded', function() {
+                                updateNamaBarang();
+                            });
+                        </script>
 
 
                     </div>
@@ -368,8 +351,7 @@ document.addEventListener('DOMContentLoaded', function() {
     </a>
 
     <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -402,7 +384,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     <!-- Page level custom scripts -->
     <script src="<?= base_url('admin/js/demo/chart-area-demo.js'); ?>"></script>
-    <script src="<?= base_url('admin/js/demo/chart-pie-demo.js') ;?>"></script>
+    <script src="<?= base_url('admin/js/demo/chart-pie-demo.js'); ?>"></script>
 
 </body>
 

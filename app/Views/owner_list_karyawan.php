@@ -13,9 +13,7 @@
 
     <!-- Custom fonts for this template-->
     <link href="<?= base_url('admin/vendor/fontawesome-free/css/all.min.css'); ?>" rel="stylesheet" type="text/css">
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
     <!-- Custom styles for this template-->
     <link href="<?= base_url('admin/css/sb-admin-2.min.css'); ?>" rel="stylesheet">
@@ -139,16 +137,14 @@
 
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
-                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="mr-2 d-none d-lg-inline text-gray-600">
-                               Hi, <?= session()->get('nama_pengguna'); ?>
-                            </span>
-                            <img class="img-profile rounded-circle" src="<?= base_url('admin/img/undraw_profile.svg'); ?>">
-                        </a>
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600">
+                                    Hi, <?= session()->get('nama_pengguna'); ?>
+                                </span>
+                                <img class="img-profile rounded-circle" src="<?= base_url('admin/img/undraw_profile.svg'); ?>">
+                            </a>
                             <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="userDropdown">
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                                 <a class="dropdown-item" href="#">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Profile
@@ -180,91 +176,89 @@
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800">Pelanggan</h1>
-                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm"><i
-                                class="fas fa-download fa-sm text-white-50"></i> Export PDF</a>
+                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Export PDF</a>
                     </div>
 
                     <!-- Content Row -->
 
                     <div class="row">
 
-                    <!-- Tabel Data Karyawan -->
-                    <div class="col-xl-9 col-lg-7">
-                        <div class="card shadow mb-4">
-                            <div
-                                class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                        <!-- Tabel Data Karyawan -->
+                        <div class="col-xl-9 col-lg-7">
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                                     <h6 class="m-0 font-weight-bold text-primary">Tabel Daftar Karyawan</h6>
-                                <div class="dropdown no-arrow"></div>
-                            </div>
-                            <div class="card-body">
-                                <div class="table-responsive">
-                                    <table class="table table-bordered" width="100%" cellspacing="0">
-                                        <thead>
-                                            <tr>
-                                                <th>ID Karyawan</th>
-                                                <th>Nama</th>
-                                                <th>Jenis Kelamin</th>
-                                                <th>Alamat</th>
-                                                <th>Nomor HP</th>
-                                                <th>Posisi</th>
-                                                <th>Gaji</th>
-                                                <th>Status</th>
-                                                <th>Opsi</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <?php if (!empty($karyawans) && is_array($karyawans)): ?>
-                                                <?php foreach($karyawans as $karyawan): ?>
-                                                    <tr>
-                                                        <td><?= esc($karyawan['id_karyawan']); ?></td>
-                                                        <td><?= esc($karyawan['nama']); ?></td>
-                                                        <td><?= esc($karyawan['jenis_kelamin']); ?></td>
-                                                        <td><?= esc($karyawan['alamat']); ?></td>
-                                                        <td><?= esc($karyawan['nomor_hp']); ?></td>
-                                                        <td><?= esc($karyawan['posisi']); ?></td>
-                                                        <td><?= esc($karyawan['gaji']); ?></td>
-                                                        <td><?= esc($karyawan['status']); ?></td>
-                                                        <td>
-                                                            <a href="<?= site_url('karyawan/edit/'.$karyawan['id_karyawan']); ?>" class="btn btn-warning btn-sm mb-2">Ubah</a>
-                                                            <a href="<?= site_url('karyawan/delete/'.$karyawan['id_karyawan']); ?>" class="btn btn-danger btn-sm mb-2" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?');">Hapus</a>
-                                                        </td>
-                                                    </tr>
-                                                <?php endforeach; ?>
-                                            <?php else: ?>
+                                    <div class="dropdown no-arrow"></div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered" width="100%" cellspacing="0">
+                                            <thead>
                                                 <tr>
-                                                    <td colspan="9">Tidak ada data karyawan ditemukan.</td>
+                                                    <th>ID Karyawan</th>
+                                                    <th>Nama</th>
+                                                    <th>Jenis Kelamin</th>
+                                                    <th>Alamat</th>
+                                                    <th>Nomor HP</th>
+                                                    <th>Posisi</th>
+                                                    <th>Gaji</th>
+                                                    <th>Status</th>
+                                                    <th>Opsi</th>
                                                 </tr>
-                                            <?php endif; ?>
-                                        </tbody>
-                                    </table>
+                                            </thead>
+                                            <tbody>
+                                                <?php if (!empty($karyawans) && is_array($karyawans)) : ?>
+                                                    <?php foreach ($karyawans as $karyawan) : ?>
+                                                        <tr>
+                                                            <td><?= esc($karyawan['id_karyawan']); ?></td>
+                                                            <td><?= esc($karyawan['nama']); ?></td>
+                                                            <td><?= esc($karyawan['jenis_kelamin']); ?></td>
+                                                            <td><?= esc($karyawan['alamat']); ?></td>
+                                                            <td><?= esc($karyawan['nomor_hp']); ?></td>
+                                                            <td><?= esc($karyawan['posisi']); ?></td>
+                                                            <td><?= esc($karyawan['gaji']); ?></td>
+                                                            <td><?= esc($karyawan['status']); ?></td>
+                                                            <td>
+                                                                <a href="<?= site_url('karyawan/edit/' . $karyawan['id_karyawan']); ?>" class="btn btn-warning btn-sm mb-2">Ubah</a>
+                                                                <a href="<?= site_url('karyawan/delete/' . $karyawan['id_karyawan']); ?>" class="btn btn-danger btn-sm mb-2" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?');">Hapus</a>
+                                                            </td>
+                                                        </tr>
+                                                    <?php endforeach; ?>
+                                                <?php else : ?>
+                                                    <tr>
+                                                        <td colspan="9">Tidak ada data karyawan ditemukan.</td>
+                                                    </tr>
+                                                <?php endif; ?>
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- Doughnut Chart -->
-                    <div class="col-xl-3 col-lg-5">
-                        <div class="card shadow mb-4">
-                            <!-- Card Header - Dropdown -->
-                            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                <h6 class="m-0 font-weight-bold text-primary">Statistik Jumlah Karyawan</h6>
-                                <div class="dropdown no-arrow"></div>
-                            </div>
-                            <!-- Card Body -->
-                            <div class="card-body">
-                                <div class="chart-pie pt-4 pb-2">
-                                    <canvas id="myPieChart"></canvas>
+                        <!-- Doughnut Chart -->
+                        <div class="col-xl-3 col-lg-5">
+                            <div class="card shadow mb-4">
+                                <!-- Card Header - Dropdown -->
+                                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold text-primary">Statistik Jumlah Karyawan</h6>
+                                    <div class="dropdown no-arrow"></div>
                                 </div>
-                                <div class="mt-4 text-center small">
-                                    <!-- Optional: Add labels for the chart here if needed -->
+                                <!-- Card Body -->
+                                <div class="card-body">
+                                    <div class="chart-pie pt-4 pb-2">
+                                        <canvas id="myPieChart"></canvas>
+                                    </div>
+                                    <div class="mt-4 text-center small">
+                                        <!-- Optional: Add labels for the chart here if needed -->
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- Hidden input to store JSON data -->
-                    <input type="hidden" id="posisiCounts" value='<?= json_encode($posisiCounts); ?>'>
-                    
+                        <!-- Hidden input to store JSON data -->
+                        <input type="hidden" id="posisiCounts" value='<?= json_encode($posisiCounts); ?>'>
+
                     </div>
 
                 </div>
@@ -295,8 +289,7 @@
     </a>
 
     <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -329,7 +322,7 @@
 
     <!-- Page level custom scripts -->
     <script src="<?= base_url('admin/js/demo/chart-area-demo.js'); ?>"></script>
-    <script src="<?= base_url('admin/js/demo/chart-pie-demo.js') ;?>"></script>
+    <script src="<?= base_url('admin/js/demo/chart-pie-demo.js'); ?>"></script>
 
 </body>
 

@@ -13,9 +13,7 @@
 
     <!-- Custom fonts for this template-->
     <link href="<?= base_url('admin/vendor/fontawesome-free/css/all.min.css'); ?>" rel="stylesheet" type="text/css">
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
     <!-- Custom styles for this template-->
     <link href="<?= base_url('admin/css/sb-admin-2.min.css'); ?>" rel="stylesheet">
@@ -139,16 +137,14 @@
 
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
-                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="mr-2 d-none d-lg-inline text-gray-600">
-                               Hi, <?= session()->get('nama_pengguna'); ?>
-                            </span>
-                            <img class="img-profile rounded-circle" src="<?= base_url('admin/img/undraw_profile.svg'); ?>">
-                        </a>
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600">
+                                    Hi, <?= session()->get('nama_pengguna'); ?>
+                                </span>
+                                <img class="img-profile rounded-circle" src="<?= base_url('admin/img/undraw_profile.svg'); ?>">
+                            </a>
                             <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="userDropdown">
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                                 <a class="dropdown-item" href="<?= base_url('/auth/logout'); ?>">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Keluar
@@ -173,58 +169,58 @@
 
                     <div class="row">
 
-                    <!-- Edit Data Karyawan -->
-                    <div class="col-xl-12 col-lg-7">
-                        <div class="card shadow mb-4">
-                            <div class="card-header py-3">
-                                <h6 class="m-0 font-weight-bold text-primary">Formulir Ubah Data</h6>
-                            </div>
-                            <div class="card-body">
-                                <form action="/karyawan/update/<?= $karyawan['id_karyawan']; ?>" method="post">
-                                    <div class="form-group">
-                                        <label for="nama">Nama:</label>
-                                        <input type="text" class="form-control" id="nama" name="nama" value="<?= esc($karyawan['nama']); ?>">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="jenis_kelamin">Jenis Kelamin:</label>
-                                        <select class="form-control" id="jenis_kelamin" name="jenis_kelamin">
-                                            <option value="L" <?= $karyawan['jenis_kelamin'] == 'L' ? 'selected' : ''; ?>>L</option>
-                                            <option value="P" <?= $karyawan['jenis_kelamin'] == 'P' ? 'selected' : ''; ?>>P</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="alamat">Alamat:</label>
-                                        <textarea class="form-control" id="alamat" name="alamat"><?= esc($karyawan['alamat']); ?></textarea>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="nomor_hp">Nomor HP:</label>
-                                        <input type="text" class="form-control" id="nomor_hp" name="nomor_hp" value="<?= esc($karyawan['nomor_hp']); ?>">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="posisi">Posisi:</label>
-                                        <input type="text" class="form-control" id="posisi" name="posisi" value="<?= esc($karyawan['posisi']); ?>">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="gaji">Gaji:</label>
-                                        <input type="number" class="form-control" id="gaji" name="gaji" value="<?= esc($karyawan['gaji']); ?>">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="status">Status:</label>
-                                        <select class="form-control" id="status" name="status">
-                                            <option value="Aktif" <?= $karyawan['status'] == 'Aktif' ? 'selected' : ''; ?>>Aktif</option>
-                                            <option value="Tidak Aktif" <?= $karyawan['status'] == 'Tidak Aktif' ? 'selected' : ''; ?>>Tidak Aktif</option>
-                                            <option value="Resign" <?= $karyawan['status'] == 'Resign' ? 'selected' : ''; ?>>Resign</option>
-                                        </select>
-                                    </div>
-                                    <div class="d-flex justify-content-end">
-                                        <a href="/daftar_karyawan" class="btn btn-primary mr-2">Kembali</a>
-                                        <button type="submit" class="btn btn-primary">Perbarui Data</button>
-                                    </div>
-                                </form>
+                        <!-- Edit Data Karyawan -->
+                        <div class="col-xl-12 col-lg-7">
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">Formulir Ubah Data</h6>
+                                </div>
+                                <div class="card-body">
+                                    <form action="/karyawan/update/<?= $karyawan['id_karyawan']; ?>" method="post">
+                                        <div class="form-group">
+                                            <label for="nama">Nama:</label>
+                                            <input type="text" class="form-control" id="nama" name="nama" value="<?= esc($karyawan['nama']); ?>">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="jenis_kelamin">Jenis Kelamin:</label>
+                                            <select class="form-control" id="jenis_kelamin" name="jenis_kelamin">
+                                                <option value="L" <?= $karyawan['jenis_kelamin'] == 'L' ? 'selected' : ''; ?>>L</option>
+                                                <option value="P" <?= $karyawan['jenis_kelamin'] == 'P' ? 'selected' : ''; ?>>P</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="alamat">Alamat:</label>
+                                            <textarea class="form-control" id="alamat" name="alamat"><?= esc($karyawan['alamat']); ?></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="nomor_hp">Nomor HP:</label>
+                                            <input type="text" class="form-control" id="nomor_hp" name="nomor_hp" value="<?= esc($karyawan['nomor_hp']); ?>">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="posisi">Posisi:</label>
+                                            <input type="text" class="form-control" id="posisi" name="posisi" value="<?= esc($karyawan['posisi']); ?>">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="gaji">Gaji:</label>
+                                            <input type="number" class="form-control" id="gaji" name="gaji" value="<?= esc($karyawan['gaji']); ?>">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="status">Status:</label>
+                                            <select class="form-control" id="status" name="status">
+                                                <option value="Aktif" <?= $karyawan['status'] == 'Aktif' ? 'selected' : ''; ?>>Aktif</option>
+                                                <option value="Tidak Aktif" <?= $karyawan['status'] == 'Tidak Aktif' ? 'selected' : ''; ?>>Tidak Aktif</option>
+                                                <option value="Resign" <?= $karyawan['status'] == 'Resign' ? 'selected' : ''; ?>>Resign</option>
+                                            </select>
+                                        </div>
+                                        <div class="d-flex justify-content-end">
+                                            <a href="/daftar_karyawan" class="btn btn-primary mr-2">Kembali</a>
+                                            <button type="submit" class="btn btn-primary">Perbarui Data</button>
+                                        </div>
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
                 </div>
                 <!-- /.container-fluid -->
@@ -254,8 +250,7 @@
     </a>
 
     <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -288,7 +283,7 @@
 
     <!-- Page level custom scripts -->
     <script src="<?= base_url('admin/js/demo/chart-area-demo.js'); ?>"></script>
-    <script src="<?= base_url('admin/js/demo/chart-pie-demo.js') ;?>"></script>
+    <script src="<?= base_url('admin/js/demo/chart-pie-demo.js'); ?>"></script>
 
 </body>
 

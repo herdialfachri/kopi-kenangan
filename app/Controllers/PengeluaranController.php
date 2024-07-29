@@ -10,7 +10,7 @@ class PengeluaranController extends BaseController
     public function index()
     {
         $model = new PengeluaranModel();
-        
+
         $perPage = 8;
         $currentPage = $this->request->getVar('page') ? (int)$this->request->getVar('page') : 1;
 
@@ -23,10 +23,10 @@ class PengeluaranController extends BaseController
     }
 
     public function create()
-    { 
+    {
         $barangModel = new BarangModel();
         $data['barangs'] = $barangModel->getAllBarang();
-        
+
         return view('pengeluaran_add', $data);
     }
 

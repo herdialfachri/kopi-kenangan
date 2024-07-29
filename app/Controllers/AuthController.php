@@ -25,8 +25,8 @@ class AuthController extends Controller
         $sandi_pengguna = md5($this->request->getVar('password'));
 
         $user = $model->where('nama_pengguna', $nama_pengguna)
-                      ->where('sandi_pengguna', $sandi_pengguna)
-                      ->first();
+            ->where('sandi_pengguna', $sandi_pengguna)
+            ->first();
 
         if ($user) {
             $ses_data = [
@@ -68,5 +68,4 @@ class AuthController extends Controller
         session()->destroy();
         return redirect()->to('/login_admin');
     }
-    
 }

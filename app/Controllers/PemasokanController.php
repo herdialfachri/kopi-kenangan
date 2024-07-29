@@ -26,7 +26,7 @@ class PemasokanController extends BaseController
     {
         $barangModel = new BarangModel();
         $data['barangs'] = $barangModel->getAllBarang();
-        
+
         return view('pemasukan_add', $data);
     }
 

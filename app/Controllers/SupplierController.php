@@ -9,7 +9,7 @@ class SupplierController extends BaseController
     public function index()
     {
         $model = new SupplierModel();
-        
+
         $data = [
             'suppliers' => $model->paginate(8),
             'pager' => $model->pager

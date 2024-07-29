@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Controllers;
+
 use App\Models\KaryawanModel;
 
 class KaryawanController extends BaseController
@@ -9,11 +10,11 @@ class KaryawanController extends BaseController
     {
         $karyawanModel = new KaryawanModel();
         $data['karyawans'] = $karyawanModel->findAll();
-        
+
         // Menghitung jumlah karyawan per posisi
         $data['posisiCounts'] = $karyawanModel->select('posisi, COUNT(*) as count')
-                                              ->groupBy('posisi')
-                                              ->findAll();
+            ->groupBy('posisi')
+            ->findAll();
 
         return view('owner_list_karyawan', $data);
     }
