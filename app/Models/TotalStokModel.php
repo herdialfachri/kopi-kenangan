@@ -8,7 +8,7 @@ class TotalStokModel extends Model
 {
     protected $table = 'total_stok_barang';
     protected $primaryKey = 'kode_barang';
-    protected $allowedFields = ['kode_barang', 'nama_barang', 'total_stok'];
+    protected $allowedFields = ['kode_barang', 'nama_barang', 'total_stok', 'kategori_barang'];
 
     public function getTotalStok()
     {

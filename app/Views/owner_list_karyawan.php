@@ -35,7 +35,7 @@
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-smile-wink"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">Admin DM</div>
+                <div class="sidebar-brand-text mx-3">Owner DM</div>
             </a>
 
             <!-- Divider -->
@@ -45,7 +45,7 @@
             <li class="nav-item ">
                 <a class="nav-link" href="/dashboard_owner">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
+                    <span>Beranda</span></a>
             </li>
 
             <!-- Divider -->
@@ -72,28 +72,6 @@
 
             <!-- Divider -->
             <hr class="sidebar-divider">
-
-            <!-- Heading -->
-            <div class="sidebar-heading">
-                Keuangan
-            </div>
-
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link" href="/pengeluaran">
-                    <i class="fas fa-fw fa-arrow-up"></i>
-                    <span>Pengeluaran</span></a>
-            </li>
-
-            <!-- Nav Item - Charts -->
-            <li class="nav-item">
-                <a class="nav-link" href="/pemasukan">
-                    <i class="fas fa-fw fa-arrow-down"></i>
-                    <span>Pemasukan</span></a>
-            </li>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider d-none d-md-block">
 
             <!-- Heading -->
             <div class="sidebar-heading">
@@ -184,7 +162,7 @@
                     <div class="row">
 
                         <!-- Tabel Data Karyawan -->
-                        <div class="col-xl-9 col-lg-7">
+                        <div class="col-xl-12 col-lg-7">
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                                     <h6 class="m-0 font-weight-bold text-primary">Tabel Daftar Karyawan</h6>
@@ -235,29 +213,6 @@
                                 </div>
                             </div>
                         </div>
-
-                        <!-- Doughnut Chart -->
-                        <div class="col-xl-3 col-lg-5">
-                            <div class="card shadow mb-4">
-                                <!-- Card Header - Dropdown -->
-                                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Statistik Jumlah Karyawan</h6>
-                                    <div class="dropdown no-arrow"></div>
-                                </div>
-                                <!-- Card Body -->
-                                <div class="card-body">
-                                    <div class="chart-pie pt-4 pb-2">
-                                        <canvas id="myPieChart"></canvas>
-                                    </div>
-                                    <div class="mt-4 text-center small">
-                                        <!-- Optional: Add labels for the chart here if needed -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Hidden input to store JSON data -->
-                        <input type="hidden" id="posisiCounts" value='<?= json_encode($posisiCounts); ?>'>
 
                     </div>
 

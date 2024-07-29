@@ -79,7 +79,7 @@
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <a class="collapse-item" href="/pengeluaran_admin">Daftar Pengeluaran</a>
-                        <a class="collapse-item" href="#">Tambah Pengeluaran</a>
+                        <a class="collapse-item" href="/pengeluaran/create">Tambah Pengeluaran</a>
                     </div>
                 </div>
             </li>
@@ -173,19 +173,6 @@
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Profile
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Settings
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Activity Log
-                                </a>
-                                <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="<?= base_url('/auth/logout'); ?>">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Logout
@@ -216,30 +203,34 @@
                                     <h6 class="m-0 font-weight-bold text-primary">Total Stok Barang</h6>
                                 </div>
                                 <div class="card-body">
-                                    <table class="table table-bordered">
-                                        <thead>
-                                            <tr>
-                                                <th>Kode Barang</th>
-                                                <th>Nama Barang</th>
-                                                <th>Total Stok</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <?php if (isset($total_stok) && !empty($total_stok)) : ?>
-                                                <?php foreach ($total_stok as $stok) : ?>
-                                                    <tr>
-                                                        <td><?= $stok['kode_barang'] ?></td>
-                                                        <td><?= $stok['nama_barang'] ?></td>
-                                                        <td><?= $stok['total_stok'] ?></td>
-                                                    </tr>
-                                                <?php endforeach; ?>
-                                            <?php else : ?>
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered">
+                                            <thead>
                                                 <tr>
-                                                    <td colspan="3" class="text-center">Data tidak tersedia</td>
+                                                    <th>Kode Barang</th>
+                                                    <th>Nama Barang</th>
+                                                    <th>Total Stok</th>
+                                                    <th>Kategori</th>
                                                 </tr>
-                                            <?php endif; ?>
-                                        </tbody>
-                                    </table>
+                                            </thead>
+                                            <tbody>
+                                                <?php if (isset($total_stok) && !empty($total_stok)) : ?>
+                                                    <?php foreach ($total_stok as $stok) : ?>
+                                                        <tr>
+                                                            <td><?= $stok['kode_barang'] ?></td>
+                                                            <td><?= $stok['nama_barang'] ?></td>
+                                                            <td><?= $stok['total_stok'] ?></td>
+                                                            <td><?= $stok['kategori_barang'] ?></td>
+                                                        </tr>
+                                                    <?php endforeach; ?>
+                                                <?php else : ?>
+                                                    <tr>
+                                                        <td colspan="4" class="text-center">Data tidak tersedia</td>
+                                                    </tr>
+                                                <?php endif; ?>
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
                             </div>
                         </div>

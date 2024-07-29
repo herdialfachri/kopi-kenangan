@@ -31,11 +31,12 @@ class StokController extends BaseController
             'harga_satuan' => $this->request->getPost('harga_satuan'),
             'total_harga' => $this->request->getPost('harga_satuan') * $this->request->getPost('jumlah_barang'),
             'satuan' => $this->request->getPost('satuan'),
-            'nama_supplier' => $this->request->getPost('nama_supplier')
+            'nama_supplier' => $this->request->getPost('nama_supplier'),
+            'kategori_barang' => $this->request->getPost('kategori_barang')
         ];
 
         $this->pemasokanModel->save($data);
-        $this->pemasokanModel->updateTotalStok($data['kode_barang'], $data['jumlah_barang']);
+        $this->pemasokanModel->updateTotalStok($data['kode_barang'], $data['jumlah_barang'], $data['kategori_barang']);
 
         return redirect()->to('/pemasokan'); // Redirect ke halaman yang sesuai
     }
@@ -50,11 +51,12 @@ class StokController extends BaseController
             'nama_barang' => $this->request->getPost('nama_barang'),
             'jumlah_barang' => $this->request->getPost('jumlah_barang'),
             'keterangan' => $this->request->getPost('keterangan'),
-            'satuan' => $this->request->getPost('satuan')
+            'satuan' => $this->request->getPost('satuan'),
+            'kategori_barang' => $this->request->getPost('kategori_barang')
         ];
 
         $this->pengeluaranModel->save($data);
-        $this->pengeluaranModel->updateTotalStok($data['kode_barang'], $data['jumlah_barang']);
+        $this->pengeluaranModel->updateTotalStok($data['kode_barang'], $data['jumlah_barang'], $data['kategori_barang']);
 
         return redirect()->to('/pengeluaran_admin'); // Redirect ke halaman yang sesuai
     }

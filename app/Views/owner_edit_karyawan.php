@@ -35,7 +35,7 @@
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-smile-wink"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">Kopi DM</div>
+                <div class="sidebar-brand-text mx-3">Owner DM</div>
             </a>
 
             <!-- Divider -->
@@ -45,7 +45,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="/dashboard_owner">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
+                    <span>Beranda</span></a>
             </li>
 
             <!-- Divider -->
@@ -72,28 +72,6 @@
 
             <!-- Divider -->
             <hr class="sidebar-divider">
-
-            <!-- Heading -->
-            <div class="sidebar-heading">
-                Keuangan
-            </div>
-
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link" href="/pengeluaran">
-                    <i class="fas fa-fw fa-arrow-up"></i>
-                    <span>Pengeluaran</span></a>
-            </li>
-
-            <!-- Nav Item - Charts -->
-            <li class="nav-item">
-                <a class="nav-link" href="/pemasukan">
-                    <i class="fas fa-fw fa-arrow-down"></i>
-                    <span>Pemasukan</span></a>
-            </li>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider d-none d-md-block">
 
             <!-- Heading -->
             <div class="sidebar-heading">

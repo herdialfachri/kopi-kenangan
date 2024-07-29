@@ -173,19 +173,6 @@
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Profile
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Settings
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Activity Log
-                                </a>
-                                <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="<?= base_url('/auth/logout'); ?>">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Logout
@@ -226,8 +213,11 @@
                                             <input type="text" class="form-control" id="nama_barang" name="nama_barang" required>
                                         </div>
                                         <div class="form-group">
-                                            <label for="kategori_barang">Kategori Barang</label>
-                                            <input type="text" class="form-control" id="kategori_barang" name="kategori_barang" required>
+                                            <label for="kategori_barang">Kategori</label>
+                                            <select class="form-control" id="kategori_barang" name="kategori_barang" required>
+                                                <option value="Bahan Jadi">Bahan Jadi</option>
+                                                <option value="Bahan Baku">Bahan Baku</option>
+                                            </select>
                                         </div>
                                         <div class="form-group">
                                             <label for="harga_satuan">Harga Satuan</label>
@@ -235,7 +225,11 @@
                                         </div>
                                         <div class="form-group">
                                             <label for="satuan">Satuan</label>
-                                            <input type="text" class="form-control" id="satuan" name="satuan" required>
+                                            <select class="form-control" id="satuan" name="satuan" required>
+                                                <option value="Kg">Kg</option>
+                                                <option value="Pcs">Pcs</option>
+                                                <option value="Ton">Ton</option>
+                                            </select>
                                         </div>
                                         <button type="submit" class="btn btn-primary">Simpan</button>
                                     </form>

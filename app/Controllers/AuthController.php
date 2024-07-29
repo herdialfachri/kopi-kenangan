@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\PenggunaModel;
+use App\Models\KaryawanModel;
 use CodeIgniter\Controller;
 
 class AuthController extends Controller
@@ -60,7 +61,15 @@ class AuthController extends Controller
 
     public function dashboard_owner()
     {
-        return view('dashboard_owner');
+        $karyawanModel = new KaryawanModel();
+        $data['karyawans'] = $karyawanModel->findAll();
+
+        // Menghitung jumlah karyawan per posisi
+        $data['posisiCounts'] = $karyawanModel->select('posisi, COUNT(*) as count')
+            ->groupBy('posisi')
+            ->findAll();
+
+        return view('dashboard_owner', $data);
     }
 
     public function logout()

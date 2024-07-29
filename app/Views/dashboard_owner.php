@@ -45,7 +45,7 @@
             <li class="nav-item active">
                 <a class="nav-link" href="#">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
+                    <span>Beranda</span></a>
             </li>
 
             <!-- Divider -->
@@ -70,30 +70,15 @@
                     <span>Tambah Pekerja</span></a>
             </li>
 
+            <!-- Nav Item - Utilities Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link" href="/tambah_admin">
+                    <i class="fas fa-fw fa-plus"></i>
+                    <span>Tambah Admin</span></a>
+            </li>
+
             <!-- Divider -->
             <hr class="sidebar-divider">
-
-            <!-- Heading -->
-            <div class="sidebar-heading">
-                Keuangan
-            </div>
-
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link" href="/pengeluaran">
-                    <i class="fas fa-fw fa-arrow-up"></i>
-                    <span>Pengeluaran</span></a>
-            </li>
-
-            <!-- Nav Item - Charts -->
-            <li class="nav-item">
-                <a class="nav-link" href="/pemasukan">
-                    <i class="fas fa-fw fa-arrow-down"></i>
-                    <span>Pemasukan</span></a>
-            </li>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider d-none d-md-block">
 
             <!-- Heading -->
             <div class="sidebar-heading">
@@ -282,24 +267,13 @@
                             </div>
                         </div>
 
-                        <!-- Pie Chart -->
+                        <!-- Doughnut Chart -->
                         <div class="col-xl-4 col-lg-5">
                             <div class="card shadow mb-4">
                                 <!-- Card Header - Dropdown -->
                                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Revenue Sources</h6>
-                                    <div class="dropdown no-arrow">
-                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                                        </a>
-                                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
-                                            <div class="dropdown-header">Dropdown Header:</div>
-                                            <a class="dropdown-item" href="#">Action</a>
-                                            <a class="dropdown-item" href="#">Another action</a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#">Something else here</a>
-                                        </div>
-                                    </div>
+                                    <h6 class="m-0 font-weight-bold text-primary">Statistik Jumlah Karyawan</h6>
+                                    <div class="dropdown no-arrow"></div>
                                 </div>
                                 <!-- Card Body -->
                                 <div class="card-body">
@@ -307,19 +281,15 @@
                                         <canvas id="myPieChart"></canvas>
                                     </div>
                                     <div class="mt-4 text-center small">
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-primary"></i> Direct
-                                        </span>
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-success"></i> Social
-                                        </span>
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-info"></i> Referral
-                                        </span>
+                                        <!-- Optional: Add labels for the chart here if needed -->
                                     </div>
                                 </div>
                             </div>
                         </div>
+
+                        <!-- Hidden input to store JSON data -->
+                        <input type="hidden" id="posisiCounts" value='<?= json_encode($posisiCounts); ?>'>
+
                     </div>
 
                 </div>

@@ -173,19 +173,6 @@
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Profile
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Settings
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Activity Log
-                                </a>
-                                <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="<?= base_url('/auth/logout'); ?>">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Logout
@@ -247,6 +234,13 @@
                                                 <option value="Kg">Kg</option>
                                                 <option value="Pcs">Pcs</option>
                                                 <option value="Ton">Ton</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="kategori_barang">Kategori</label>
+                                            <select class="form-control" id="kategori_barang" name="kategori_barang" required>
+                                                <option value="Bahan Jadi">Bahan Jadi</option>
+                                                <option value="Bahan Baku">Bahan Baku</option>
                                             </select>
                                         </div>
                                         <div class="d-flex justify-content-end">

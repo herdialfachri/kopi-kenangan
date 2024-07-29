@@ -173,19 +173,6 @@
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Profile
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Settings
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Activity Log
-                                </a>
-                                <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="<?= base_url('/auth/logout'); ?>">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Logout
@@ -230,6 +217,7 @@
                                                     <th>Harga Satuan</th>
                                                     <th>Total Harga</th>
                                                     <th>Nama Supplier</th>
+                                                    <th>Kategori Barang</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -245,11 +233,12 @@
                                                             <td><?= $item['harga_satuan']; ?></td>
                                                             <td><?= $item['total_harga']; ?></td>
                                                             <td><?= $item['nama_supplier']; ?></td>
+                                                            <td><?= $item['kategori_barang']; ?></td>
                                                         </tr>
                                                     <?php endforeach; ?>
                                                 <?php else : ?>
                                                     <tr>
-                                                        <td colspan="9" class="text-center">No data available</td>
+                                                        <td colspan="9" class="text-center">Data masih kosong!</td>
                                                     </tr>
                                                 <?php endif; ?>
                                             </tbody>

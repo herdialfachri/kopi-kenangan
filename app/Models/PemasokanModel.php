@@ -7,9 +7,9 @@ use CodeIgniter\Model;
 class PemasokanModel extends Model
 {
     protected $table = 'pemasokan_dm';
-    protected $allowedFields = ['id_pemasok', 'tgl_masuk', 'kode_barang', 'nama_barang', 'jumlah_barang', 'harga_satuan', 'satuan', 'total_harga', 'nama_supplier'];
+    protected $allowedFields = ['id_pemasok', 'tgl_masuk', 'kode_barang', 'nama_barang', 'jumlah_barang', 'harga_satuan', 'satuan', 'total_harga', 'nama_supplier', 'kategori_barang'];
 
-    public function updateTotalStok($kode_barang, $jumlah_barang)
+    public function updateTotalStok($kode_barang, $jumlah_barang, $kategori_barang)
     {
         $db = \Config\Database::connect();
         $totalStokModel = new \App\Models\TotalStokModel();
@@ -23,7 +23,8 @@ class PemasokanModel extends Model
             $totalStokModel->insert([
                 'kode_barang' => $kode_barang,
                 'nama_barang' => $this->where('kode_barang', $kode_barang)->first()['nama_barang'],
-                'total_stok' => $jumlah_barang
+                'total_stok' => $jumlah_barang,
+                'kategori_barang' => $kategori_barang
             ]);
         }
     }
