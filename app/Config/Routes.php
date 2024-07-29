@@ -16,8 +16,8 @@ $routes->get('/daftar_karyawan', 'KaryawanController::daftarkaryawan');
 $routes->get('/tambah_karyawan', 'KaryawanController::add_karyawan');
 $routes->get('/pengeluaran', 'KeuanganController::pengeluaran');
 $routes->get('/pemasukan', 'KeuanganController::pemasukan');
-$routes->get('/daftar_barang', 'BarangController::view_barang'); 
-  
+$routes->get('/daftar_barang', 'StokController::index_owner'); 
+   
 $routes->get('/karyawan/edit/(:num)', 'KaryawanController::edit/$1');
 $routes->post('/karyawan/update/(:num)', 'KaryawanController::update/$1');
 $routes->get('/karyawan/delete/(:num)', 'KaryawanController::delete/$1');
