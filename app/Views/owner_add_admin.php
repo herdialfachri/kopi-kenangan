@@ -42,7 +42,7 @@
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item">
+            <li class="nav-item ">
                 <a class="nav-link" href="/dashboard_owner">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Beranda</span></a>
@@ -57,8 +57,8 @@
             </div>
 
             <!-- Nav Item - Utilities Collapse Menu -->
-            <li class="nav-item active">
-                <a class="nav-link" href="#">
+            <li class="nav-item ">
+                <a class="nav-link" href="/daftar_karyawan">
                     <i class="fas fa-fw fa-user"></i>
                     <span>Daftar Pekerja</span></a>
             </li>
@@ -78,8 +78,8 @@
             </li>
 
             <!-- Nav Item - Utilities Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link" href="/admin/create">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">
                     <i class="fas fa-fw fa-plus"></i>
                     <span>Tambah Pengguna</span></a>
             </li>
@@ -137,9 +137,22 @@
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Profile
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Settings
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Activity Log
+                                </a>
+                                <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="<?= base_url('/auth/logout'); ?>">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Keluar
+                                    Logout
                                 </a>
                             </div>
                         </li>
@@ -154,64 +167,45 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Daftar Pekerja</h1>
+                        <h1 class="h3 mb-0 text-gray-800">Pengguna</h1>
+                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Export PDF</a>
                     </div>
 
                     <!-- Content Row -->
 
                     <div class="row">
 
-                        <!-- Edit Data Karyawan -->
+                        <!-- Formulir Tambah Admin -->
                         <div class="col-xl-12 col-lg-7">
                             <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Formulir Ubah Data</h6>
+                                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold text-primary">Formulir Tambah Pengguna Baru</h6>
                                 </div>
                                 <div class="card-body">
-                                    <form action="/karyawan/update/<?= $karyawan['id_karyawan']; ?>" method="post">
+                                    <form action="<?= site_url('admin/store'); ?>" method="post">
                                         <div class="form-group">
-                                            <label for="nama">Nama:</label>
-                                            <input type="text" class="form-control" id="nama" name="nama" value="<?= esc($karyawan['nama']); ?>">
+                                            <label for="nama_pengguna">Nama Pengguna</label>
+                                            <input type="text" class="form-control" id="nama_pengguna" name="nama_pengguna" required>
                                         </div>
                                         <div class="form-group">
-                                            <label for="jenis_kelamin">Jenis Kelamin:</label>
-                                            <select class="form-control" id="jenis_kelamin" name="jenis_kelamin">
-                                                <option value="L" <?= $karyawan['jenis_kelamin'] == 'L' ? 'selected' : ''; ?>>L</option>
-                                                <option value="P" <?= $karyawan['jenis_kelamin'] == 'P' ? 'selected' : ''; ?>>P</option>
-                                            </select>
+                                            <label for="sandi_pengguna">Sandi Pengguna</label>
+                                            <input type="password" class="form-control" id="sandi_pengguna" name="sandi_pengguna" required>
                                         </div>
                                         <div class="form-group">
-                                            <label for="alamat">Alamat:</label>
-                                            <textarea class="form-control" id="alamat" name="alamat"><?= esc($karyawan['alamat']); ?></textarea>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="nomor_hp">Nomor HP:</label>
-                                            <input type="text" class="form-control" id="nomor_hp" name="nomor_hp" value="<?= esc($karyawan['nomor_hp']); ?>">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="posisi">Posisi:</label>
-                                            <input type="text" class="form-control" id="posisi" name="posisi" value="<?= esc($karyawan['posisi']); ?>">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="gaji">Gaji:</label>
-                                            <input type="number" class="form-control" id="gaji" name="gaji" value="<?= esc($karyawan['gaji']); ?>">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="status">Status:</label>
-                                            <select class="form-control" id="status" name="status">
-                                                <option value="Aktif" <?= $karyawan['status'] == 'Aktif' ? 'selected' : ''; ?>>Aktif</option>
-                                                <option value="Tidak Aktif" <?= $karyawan['status'] == 'Tidak Aktif' ? 'selected' : ''; ?>>Tidak Aktif</option>
-                                                <option value="Resign" <?= $karyawan['status'] == 'Resign' ? 'selected' : ''; ?>>Resign</option>
+                                            <label for="peran">Peran</label>
+                                            <select class="form-control" id="peran" name="peran">
+                                                <option value="1">Owner</option>
+                                                <option value="2">Admin</option>
                                             </select>
                                         </div>
                                         <div class="d-flex justify-content-end">
-                                            <a href="/daftar_karyawan" class="btn btn-primary mr-2">Kembali</a>
-                                            <button type="submit" class="btn btn-primary">Perbarui Data</button>
+                                            <button type="submit" class="btn btn-primary mb-2">Tambah Pengguna</button>
                                         </div>
                                     </form>
                                 </div>
                             </div>
                         </div>
+
                     </div>
 
                 </div>

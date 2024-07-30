@@ -72,9 +72,16 @@
 
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link" href="/tambah_admin">
+                <a class="nav-link" href="/admin/list">
                     <i class="fas fa-fw fa-users"></i>
-                    <span>Tambah Admin</span></a>
+                    <span>Pengguna Aplikasi</span></a>
+            </li>
+
+            <!-- Nav Item - Utilities Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link" href="/admin/create">
+                    <i class="fas fa-fw fa-plus"></i>
+                    <span>Tambah Pengguna</span></a>
             </li>
 
             <!-- Divider -->
@@ -160,7 +167,7 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Pelanggan</h1>
+                        <h1 class="h3 mb-0 text-gray-800">Karyawan</h1>
                         <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Export PDF</a>
                     </div>
 

@@ -72,9 +72,16 @@
 
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link" href="/tambah_admin">
+                <a class="nav-link" href="/admin/list">
                     <i class="fas fa-fw fa-users"></i>
-                    <span>Tambah Admin</span></a>
+                    <span>Pengguna Aplikasi</span></a>
+            </li>
+
+            <!-- Nav Item - Utilities Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link" href="/admin/create">
+                    <i class="fas fa-fw fa-plus"></i>
+                    <span>Tambah Pengguna</span></a>
             </li>
 
             <!-- Divider -->

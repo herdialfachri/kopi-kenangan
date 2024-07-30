@@ -65,16 +65,23 @@
 
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item active">
-                <a class="nav-link" href="/tambah_karyawan">
+                <a class="nav-link" href="#">
                     <i class="fas fa-fw fa-plus"></i>
                     <span>Tambah Pekerja</span></a>
             </li>
 
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link" href="/tambah_admin">
+                <a class="nav-link" href="/admin/list">
                     <i class="fas fa-fw fa-users"></i>
-                    <span>Tambah Admin</span></a>
+                    <span>Pengguna Aplikasi</span></a>
+            </li>
+
+            <!-- Nav Item - Utilities Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link" href="/admin/create">
+                    <i class="fas fa-fw fa-plus"></i>
+                    <span>Tambah Pengguna</span></a>
             </li>
 
             <!-- Divider -->
@@ -147,7 +154,7 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Tambah Pekerja</h1>
+                        <h1 class="h3 mb-0 text-gray-800">Karyawan</h1>
                     </div>
 
                     <!-- Content Row -->
@@ -158,7 +165,7 @@
                         <div class="col-xl-12 col-lg-7">
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Formulir Tambah Data</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">Formulir Tambah Data Karyawan</h6>
                                 </div>
                                 <div class="card-body">
                                     <form action="/karyawan/save_karyawan" method="post">
@@ -198,7 +205,7 @@
                                             </select>
                                         </div>
                                         <div class="d-flex justify-content-end">
-                                            <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Simpan Data</button>
+                                            <button type="submit" class="btn btn-primary">Tambah Karyawan</button>
                                         </div>
                                     </form>
                                 </div>
