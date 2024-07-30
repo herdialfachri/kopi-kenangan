@@ -70,6 +70,13 @@
                     <span>Tambah Pekerja</span></a>
             </li>
 
+            <!-- Nav Item - Utilities Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link" href="/tambah_admin">
+                    <i class="fas fa-fw fa-users"></i>
+                    <span>Tambah Admin</span></a>
+            </li>
+
             <!-- Divider -->
             <hr class="sidebar-divider">
 
@@ -191,7 +198,7 @@
                                             </select>
                                         </div>
                                         <div class="d-flex justify-content-end">
-                                            <button type="submit" class="btn btn-primary">Simpan Data</button>
+                                            <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Simpan Data</button>
                                         </div>
                                     </form>
                                 </div>

@@ -79,7 +79,7 @@
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <a class="collapse-item" href="/pengeluaran_admin">Daftar Pengeluaran</a>
-                        <a class="collapse-item" href="#">Tambah Pengeluaran</a>
+                        <a class="collapse-item" href="/pengeluaran/create">Tambah Pengeluaran</a>
                     </div>
                 </div>
             </li>

@@ -73,7 +73,7 @@
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link" href="/tambah_admin">
-                    <i class="fas fa-fw fa-plus"></i>
+                    <i class="fas fa-fw fa-users"></i>
                     <span>Tambah Admin</span></a>
             </li>
 

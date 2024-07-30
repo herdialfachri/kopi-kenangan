@@ -70,6 +70,13 @@
                     <span>Tambah Pekerja</span></a>
             </li>
 
+            <!-- Nav Item - Utilities Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link" href="/tambah_admin">
+                    <i class="fas fa-fw fa-users"></i>
+                    <span>Tambah Admin</span></a>
+            </li>
+
             <!-- Divider -->
             <hr class="sidebar-divider">
 

@@ -70,6 +70,13 @@
                     <span>Tambah Pekerja</span></a>
             </li>
 
+            <!-- Nav Item - Utilities Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link" href="/tambah_admin">
+                    <i class="fas fa-fw fa-users"></i>
+                    <span>Tambah Admin</span></a>
+            </li>
+
             <!-- Divider -->
             <hr class="sidebar-divider">
 
@@ -197,8 +204,12 @@
                                                             <td><?= esc($karyawan['gaji']); ?></td>
                                                             <td><?= esc($karyawan['status']); ?></td>
                                                             <td>
-                                                                <a href="<?= site_url('karyawan/edit/' . $karyawan['id_karyawan']); ?>" class="btn btn-warning btn-sm mb-2">Ubah</a>
-                                                                <a href="<?= site_url('karyawan/delete/' . $karyawan['id_karyawan']); ?>" class="btn btn-danger btn-sm mb-2" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?');">Hapus</a>
+                                                                <a href="<?= site_url('karyawan/edit/' . $karyawan['id_karyawan']); ?>" class="btn btn-warning btn-sm mb-2">
+                                                                    <i class="fas fa-edit"></i>
+                                                                </a>
+                                                                <a href="<?= site_url('karyawan/delete/' . $karyawan['id_karyawan']); ?>" class="btn btn-danger btn-sm mb-2" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?');">
+                                                                    <i class="fas fa-trash-alt"></i>
+                                                                </a>
                                                             </td>
                                                         </tr>
                                                     <?php endforeach; ?>
