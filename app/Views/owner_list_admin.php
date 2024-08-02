@@ -189,6 +189,7 @@
                                                 <tr>
                                                     <th>ID Admin</th>
                                                     <th>Nama Pengguna</th>
+                                                    <th>Peran</th>
                                                     <th>Opsi</th>
                                                 </tr>
                                             </thead>
@@ -198,6 +199,7 @@
                                                         <tr>
                                                             <td><?= esc($admin['id_pengguna']); ?></td>
                                                             <td><?= esc($admin['nama_pengguna']); ?></td>
+                                                            <td><?= esc($admin['peran']); ?></td>
                                                             <td>
                                                                 <a href="<?= site_url('admin/edit/' . $admin['id_pengguna']); ?>" class="btn btn-warning btn-sm mb-2">
                                                                     <i class="fas fa-edit"></i>
