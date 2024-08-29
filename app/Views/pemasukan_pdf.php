@@ -60,17 +60,15 @@
 </head>
 <body>
     <div class="kop-surat">
-        <img src="<?= base_url('/images/logokopi.png'); ?>" alt="Kop Surat">
+        <!-- <img src="<?= base_url('/images/logokopi.png'); ?>" alt="Kop Surat"> -->
         <div>
-            <h1>PEMERINTAH KABUPATEN/KOTA</h1>
-            <h2>DINAS KESEHATAN</h2>
-            <p>PUSKESMAS CIBEUREUM</p>
-            <p>JL. Example No. 123, Kota Example, 12345</p>
-            <p>Tel: (021) 12345678</p>
+            <h1>PABRIK KOPI DM SUKABUMI</h1>
+            <h2>Jl. Babakan Kp. Liung Utut Ds. Babakan Kec. Cisaat Kab. Sukabumi</h2>
+            <h2>WA: 085759584338</h2>
         </div>
     </div>
 
-    <h1>Data Pemasukan</h1>
+    <h2>Data Pemasukan</h2>
     <table>
         <thead>
             <tr>

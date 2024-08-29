@@ -55,7 +55,7 @@
               <li><a href="#section-about" class="nav-link">Tentang</a></li>
               <li><a href="#section-tujuan" class="nav-link">Tujuan</a></li>
               <li><a href="#section-services" class="nav-link">Produk</a></li>
-              <li><a href="login_admin" class="nav-link">Masuk</a></li>
+              <li><a href="/login_admin" class="nav-link">Masuk</a></li>
             </ul>
           </nav>
         </div>
@@ -119,6 +119,7 @@
       <div class="row justify-content-center mb-5">
         <div class="col-md-7 text-center border-primary">
           <h2 class="font-weight-light text-primary" data-aos="fade">Tujuan Kopi DM</h2>
+          <p class="color-white-opacity-5">Tujuan Kopi DM Sukabumi</p>
         </div>
       </div>
       <div class="row">
@@ -169,80 +170,63 @@
   </div>
 
 
+  <div class="site-section block-13" id="section-services">
 
-  <div class="site-section bg-light" id="section-services">
     <div class="container">
-      <div class="row justify-content-center mb-5" data-aos="fade-up">
+      <div class="row justify-content-center mb-5">
         <div class="col-md-7 text-center border-primary">
-          <h2 class="mb-0 text-primary">Our Services</h2>
-          <p class="color-black-opacity-5">Lorem ipsum dolor sit amet.</p>
+          <h2 class="mb-0 text-primary">Produk Kopi DM</h2>
+          <p class="color-black-opacity-5">Foto Produk Kopi DM Sukabumi</p>
         </div>
       </div>
-      <div class="row align-items-stretch">
-        <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
-          <div class="unit-4 d-flex">
-            <div class="unit-4-icon mr-4"><span class="text-primary flaticon-plane"></span></div>
-            <div>
-              <h3>Air Freight</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
-              <p><a href="#">Learn More</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="unit-4 d-flex">
-            <div class="unit-4-icon mr-4"><span class="text-primary flaticon-boat-ship"></span></div>
-            <div>
-              <h3>Ocean Freight</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
-              <p><a href="#">Learn More</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="unit-4 d-flex">
-            <div class="unit-4-icon mr-4"><span class="text-primary flaticon-truck"></span></div>
-            <div>
-              <h3>Land Transportation</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
-              <p><a href="#">Learn More</a></p>
-            </div>
-          </div>
-        </div>
+    </div>
 
-
-        <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="300">
-          <div class="unit-4 d-flex">
-            <div class="unit-4-icon mr-4"><span class="text-primary flaticon-warehouse"></span></div>
-            <div>
-              <h3>Warehousing</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
-              <p><a href="#">Learn More</a></p>
-            </div>
+    <div class="owl-carousel nonloop-block-13">
+      <div>
+        <a href="#" class="unit-1 text-center">
+          <img src="images/kopi-4.jpg" alt="Image" class="img-fluid">
+          <div class="unit-1-text">
+            <h3 class="unit-1-heading">Biji Robusta Olahan</h3>
           </div>
-        </div>
-        <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="400">
-          <div class="unit-4 d-flex">
-            <div class="unit-4-icon mr-4"><span class="text-primary flaticon-wooden"></span></div>
-            <div>
-              <h3>Storage</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
-              <p><a href="#">Learn More</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="500">
-          <div class="unit-4 d-flex">
-            <div class="unit-4-icon mr-4"><span class="text-primary flaticon-worldwide"></span></div>
-            <div>
-              <h3>Worldwide Delivery</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
-              <p><a href="#">Learn More</a></p>
-            </div>
-          </div>
-        </div>
-
+        </a>
       </div>
+
+      <div>
+        <a href="#" class="unit-1 text-center">
+          <img src="images/kopi-2.jpg" alt="Image" class="img-fluid">
+          <div class="unit-1-text">
+            <h3 class="unit-1-heading">Kopi DM Robusta 100gr</h3>
+          </div>
+        </a>
+      </div>
+
+      <div>
+        <a href="#" class="unit-1 text-center">
+          <img src="images/kopi-3.jpg" alt="Image" class="img-fluid">
+          <div class="unit-1-text">
+            <h3 class="unit-1-heading">Biji Robusta Mentah</h3>
+          </div>
+        </a>
+      </div>
+
+      <div>
+        <a href="#" class="unit-1 text-center">
+          <img src="images/kopi-1.jpg" alt="Image" class="img-fluid">
+          <div class="unit-1-text">
+            <h3 class="unit-1-heading">Kopi DM Sachet</h3>
+          </div>
+        </a>
+      </div>
+
+      <div>
+        <a href="#" class="unit-1 text-center">
+          <img src="images/kopi-5.jpg" alt="Image" class="img-fluid">
+          <div class="unit-1-text">
+            <h3 class="unit-1-heading">Panen Kopi Robusta</h3>
+          </div>
+        </a>
+      </div>
+
     </div>
   </div>
 
@@ -253,21 +237,20 @@
         <div class="col-md-9">
           <div class="row">
             <div class="col-md-5 mr-auto">
-              <h2 class="footer-heading mb-4">About Us</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam iure deserunt ut architecto dolores quo beatae laborum aliquam ipsam rem impedit obcaecati ea consequatur.</p>
+              <h2 class="footer-heading mb-4">Tentang Kami</h2>
+              <p>Kopi DM Daldil Pisan adalah produsen kopi robusta asal sukabumi, produknya berasal dari biji kopi pilihan yang ditanam di dataran tinggi Sukabumi.</p>
             </div>
 
             <div class="col-md-3">
-              <h2 class="footer-heading mb-4">Quick Links</h2>
+              <h2 class="footer-heading mb-4">Navigasi</h2>
               <ul class="list-unstyled">
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Testimonials</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="#section-about">Tentang</a></li>
+                <li><a href="#section-tujuan">Tujuan</a></li>
+                <li><a href="#section-services">Produk</a></li>
               </ul>
             </div>
             <div class="col-md-3">
-              <h2 class="footer-heading mb-4">Follow Us</h2>
+              <h2 class="footer-heading mb-4">Sosial Media</h2>
               <a href="#" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
               <a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
               <a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
@@ -275,26 +258,15 @@
             </div>
           </div>
         </div>
-        <div class="col-md-3">
-          <h2 class="footer-heading mb-4">Subscribe Newsletter</h2>
-          <form action="#" method="post">
-            <div class="input-group mb-3">
-              <input type="text" class="form-control border-secondary text-white bg-transparent" placeholder="Enter Email" aria-label="Enter Email" aria-describedby="button-addon2">
-              <div class="input-group-append">
-                <button class="btn btn-primary text-white" type="button" id="button-addon2">Send</button>
-              </div>
-            </div>
-          </form>
-        </div>
       </div>
       <div class="row pt-5 mt-5 text-center">
         <div class="col-md-12">
           <div class="border-top pt-5">
             <p>
               <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-              Copyright &copy;<script>
+              Hak Cipta &copy;<script>
                 document.write(new Date().getFullYear());
-              </script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+              </script> Kopi DM Sukabumi
               <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             </p>
           </div>

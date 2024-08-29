@@ -6,7 +6,7 @@ use App\Models\KaryawanModel;
 
 class KaryawanController extends BaseController
 {
-    public function daftarkaryawan()
+    public function index()
     {
         $karyawanModel = new KaryawanModel();
         $data['karyawans'] = $karyawanModel->findAll();
@@ -48,12 +48,12 @@ class KaryawanController extends BaseController
         return redirect()->to('/daftar_karyawan');
     }
 
-    public function add_karyawan()
+    public function create()
     {
         return view('owner_add_karyawan');
     }
 
-    public function save_karyawan()
+    public function store()
     {
         $karyawanModel = new KaryawanModel();
 

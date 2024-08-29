@@ -12,7 +12,7 @@ class PengeluaranModel extends Model
 
     public function updateTotalStok($kode_barang, $jumlah_barang, $kategori_barang, $jumlahBarangOld, $nama_barang)
     {
-        $db = \Config\Database::connect();
+
         $totalStokModel = new \App\Models\TotalStokModel();
         
         $totalStok = $totalStokModel->where('kode_barang', $kode_barang)->first();
