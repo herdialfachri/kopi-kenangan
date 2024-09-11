@@ -19,7 +19,7 @@ class PemasokanController extends BaseController
         $data['currentPage'] = $currentPage;
         $data['perPage'] = $perPage;
 
-        return view('pemasukan_view', $data);
+        return view('admin/pemasukan_view', $data);
     }
 
     public function create()
@@ -27,7 +27,7 @@ class PemasokanController extends BaseController
         $barangModel = new BarangModel();
         $data['barangs'] = $barangModel->getAllBarang();
 
-        return view('pemasukan_add', $data);
+        return view('admin/pemasukan_add', $data);
     }
 
     public function store()
@@ -62,7 +62,7 @@ class PemasokanController extends BaseController
         $data['pemasokan'] = $model->where('id_pemasok', $id)->first();
         $data['barangs'] = $barangModel->getAllBarang();
 
-        return view('pemasukan_edit', $data);
+        return view('admin/pemasukan_edit', $data);
     }
 
     public function update($id)

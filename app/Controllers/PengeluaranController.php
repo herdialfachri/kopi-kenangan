@@ -19,7 +19,7 @@ class PengeluaranController extends BaseController
         $data['currentPage'] = $currentPage;
         $data['perPage'] = $perPage;
 
-        return view('pengeluaran_view', $data);
+        return view('admin/pengeluaran_view', $data);
     }
 
     public function create()
@@ -27,7 +27,7 @@ class PengeluaranController extends BaseController
         $barangModel = new BarangModel();
         $data['barangs'] = $barangModel->getAllBarang();
 
-        return view('pengeluaran_add', $data);
+        return view('admin/pengeluaran_add', $data);
     }
 
     // Menyimpan data ke database
@@ -61,7 +61,7 @@ class PengeluaranController extends BaseController
         $data['pengeluaran'] = $model->find($id);
         $data['barangs'] = $barangModel->getAllBarang();
 
-        return view('pengeluaran_edit', $data);
+        return view('admin/pengeluaran_edit', $data);
     }
 
     public function update($id)

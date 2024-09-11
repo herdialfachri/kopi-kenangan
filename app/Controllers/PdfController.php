@@ -14,7 +14,7 @@ class PdfController extends BaseController
         $data['pemasokan'] = $model->findAll();
 
         // Muat file view
-        $html = view('pemasukan_pdf', $data);
+        $html = view('pdf/pemasukan_pdf', $data);
 
         // Buat instance dari Dompdf
         $options = new Options();

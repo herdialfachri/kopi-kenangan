@@ -1,0 +1,57 @@
+<!-- Implementasi untuk view admin -->
+<?= $this->extend('template/admin_template') ?>
+
+<?= $this->section('title') ?>
+
+Daftar Supplier
+
+<?= $this->endSection() ?>
+
+<?= $this->section('content') ?>
+
+<!-- Page Heading -->
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Supplier</h1>
+    <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Export PDF</a>
+</div>
+
+<!-- Content Row -->
+<div class="row">
+
+    <div class="col-xl-12 col-lg-7">
+        <div class="card shadow mb-4">
+            <!-- Card Header - Dropdown -->
+            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                <h6 class="m-0 font-weight-bold text-primary">Daftar Supplier</h6>
+            </div>
+            <!-- Card Body -->
+            <div class="card-body">
+                <div class="row">
+                    <?php if ($suppliers) : ?>
+                        <?php foreach ($suppliers as $supplier) : ?>
+                            <div class="col-sm-12 col-md-6 col-lg-3 mb-4">
+                                <div class="card h-100" style="width: 100%;">
+                                    <div class="card-body">
+                                        <h4 class="card-title"><?= esc($supplier['nama_supplier']); ?></h4>
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">Kode Supplier: <?= esc($supplier['kode_supplier']); ?></li>
+                                        <li class="list-group-item">Alamat: <?= esc($supplier['alamat_supplier']); ?></li>
+                                        <li class="list-group-item">Kontak: <?= esc($supplier['kontak_supplier']); ?></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        <?php endforeach; ?>
+                    <?php else : ?>
+                        <p>No data found</p>
+                    <?php endif; ?>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <?= $pager->links(); ?>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<?= $this->endSection() ?>

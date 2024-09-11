@@ -17,12 +17,12 @@ class PelangganController extends BaseController
             'currentPage' => $currentPage
         ];
 
-        return view('pelanggan_view', $data);
+        return view('admin/pelanggan_view', $data);
     }
 
     public function create()
     {
-        return view('pelanggan_tambah');
+        return view('admin/pelanggan_tambah');
     }
 
     public function store()

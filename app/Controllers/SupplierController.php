@@ -15,12 +15,12 @@ class SupplierController extends BaseController
             'pager' => $model->pager
         ];
 
-        return view('supplier_view', $data);
+        return view('admin/supplier_view', $data);
     }
 
     public function create()
     {
-        return view('supplier_add');
+        return view('admin/supplier_add');
     }
 
     public function store()

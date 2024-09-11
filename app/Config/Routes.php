@@ -69,5 +69,5 @@ $routes->get('/pelanggan/create', 'PelangganController::create', ['filter' => 'a
 $routes->post('/pelanggan/store', 'PelangganController::store');
 
 //routes untuk dashboard owner
-$routes->get('/pengeluaran', 'KeuanganController::pengeluaran');
-$routes->get('/pemasukan', 'KeuanganController::pemasukan');
+// $routes->get('/pengeluaran', 'KeuanganController::pengeluaran');
+// $routes->get('/pemasukan', 'KeuanganController::pemasukan');

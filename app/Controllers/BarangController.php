@@ -17,23 +17,23 @@ class BarangController extends BaseController
             'currentPage' => $currentPage
         ];
 
-        return view('barang_view', $data);
+        return view('admin/barang_view', $data);
     }
 
-    public function view_barang()
-    {
-        return view('owner_barang');
-    }
+    // public function view_barang()
+    // {
+    //     return view('owner_barang');
+    // }
 
     public function create()
     {
-        return view('barang_add');
+        return view('admin/barang_add');
     }
 
-    public function total()
-    {
-        return view('barang_total');
-    }
+    // public function total()
+    // {
+    //     return view('barang_total');
+    // }
 
     public function store()
     {

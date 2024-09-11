@@ -14,7 +14,7 @@ class AuthController extends Controller
         if ($session->get('logged_in')) {
             return $this->redirectUser();
         }
-        return view('/login_admin');
+        return view('landingpage/login_admin');
     }
 
     public function login()
@@ -56,7 +56,7 @@ class AuthController extends Controller
 
     public function dashboard_admin()
     {
-        return view('dashboard_admin');
+        return view('admin/dashboard_admin');
     }
 
     public function dashboard_owner()
