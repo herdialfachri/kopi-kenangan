@@ -72,6 +72,6 @@ class StokController extends BaseController
     public function index_owner()
     {
         $data['total_stok'] = $this->totalStokModel->getTotalStok();
-        return view('owner_barang', $data);
+        return view('owner/owner_barang', $data);
     }
 }

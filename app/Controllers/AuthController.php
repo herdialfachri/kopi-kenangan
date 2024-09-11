@@ -69,7 +69,7 @@ class AuthController extends Controller
             ->groupBy('posisi')
             ->findAll();
 
-        return view('dashboard_owner', $data);
+        return view('owner/dashboard_owner', $data);
     }
 
     public function logout()

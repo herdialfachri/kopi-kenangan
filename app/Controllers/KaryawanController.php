@@ -10,7 +10,7 @@ class KaryawanController extends BaseController
     {
         $karyawanModel = new KaryawanModel();
         $data['karyawans'] = $karyawanModel->findAll();
-        return view('owner_list_karyawan', $data);
+        return view('owner/owner_list_karyawan', $data);
     }
 
     public function edit($id)
@@ -18,7 +18,7 @@ class KaryawanController extends BaseController
         $karyawanModel = new KaryawanModel();
         $data['karyawan'] = $karyawanModel->find($id);
 
-        return view('owner_edit_karyawan', $data);
+        return view('owner/owner_edit_karyawan', $data);
     }
 
     public function update($id)
@@ -50,7 +50,7 @@ class KaryawanController extends BaseController
 
     public function create()
     {
-        return view('owner_add_karyawan');
+        return view('owner/owner_add_karyawan');
     }
 
     public function store()

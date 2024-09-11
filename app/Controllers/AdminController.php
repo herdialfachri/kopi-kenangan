@@ -16,12 +16,12 @@ class AdminController extends BaseController
     public function index()
     {
         $data['admins'] = $this->adminModel->findAll();
-        return view('owner_list_admin', $data);
+        return view('owner/owner_list_admin', $data);
     }
 
     public function create()
     {
-        return view('owner_add_admin');
+        return view('owner/owner_add_admin');
     }
 
     public function store()
@@ -38,7 +38,7 @@ class AdminController extends BaseController
     public function edit($id)
     {
         $data['admin'] = $this->adminModel->find($id);
-        return view('owner_edit_admin', $data);
+        return view('owner/owner_edit_admin', $data);
     }
 
     public function update($id)
