@@ -68,6 +68,9 @@ $routes->get('/pelanggan', 'PelangganController::index', ['filter' => 'auth']);
 $routes->get('/pelanggan/create', 'PelangganController::create', ['filter' => 'auth']);
 $routes->post('/pelanggan/store', 'PelangganController::store');
 
+$routes->get('pengeluaran/exportPdf', 'PengeluaranController::exportPdf');
+$routes->get('pemasokan/exportPdf', 'PemasokanController::exportPdf');
+
 //routes untuk dashboard owner
 // $routes->get('/pengeluaran', 'KeuanganController::pengeluaran');
 // $routes->get('/pemasukan', 'KeuanganController::pemasukan');

@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Models\PengeluaranModel;
 use App\Models\BarangModel;
+use Dompdf\Dompdf;
 
 class PengeluaranController extends BaseController
 {
@@ -87,5 +88,30 @@ class PengeluaranController extends BaseController
         } else {
             return redirect()->back()->withInput()->with('errors', $model->errors());
         }
+    }
+
+    public function exportPdf()
+    {
+        // Load data dari model
+        $pengeluaranModel = new PengeluaranModel();
+        $data['pengeluaran'] = $pengeluaranModel->findAll();
+
+        // Load DomPDF library
+        $dompdf = new Dompdf();
+
+        // Generate HTML view untuk PDF
+        $html = view('pengeluaran_pdf', $data);
+
+        // Load HTML ke DomPDF
+        $dompdf->loadHtml($html);
+
+        // (Opsional) Set ukuran dan orientasi kertas
+        $dompdf->setPaper('A4', 'portrait');
+
+        // Render ke PDF
+        $dompdf->render();
+
+        // Output file PDF
+        $dompdf->stream("Laporan_Pengeluaran.pdf", array("Attachment" => false));
     }
 }

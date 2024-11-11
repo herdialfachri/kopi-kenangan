@@ -5,6 +5,12 @@ namespace App\Controllers;
 use App\Models\PenggunaModel;
 use App\Models\KaryawanModel;
 use CodeIgniter\Controller;
+use App\Models\TotalStokModel;
+use App\Models\PemasokanModel;
+use App\Models\PengeluaranModel;
+use App\Models\BarangModel;
+use App\Models\PelangganModel;
+
 
 class AuthController extends Controller
 {
@@ -56,21 +62,44 @@ class AuthController extends Controller
 
     public function dashboard_admin()
     {
-        return view('admin/dashboard_admin');
+        $pemasokanModel = new PemasokanModel();
+        $data['jumlahPemasokan'] = $pemasokanModel->countAllResults();
+
+        $pengeluaranModel = new PengeluaranModel();
+        $data['jumlahPengeluaran'] = $pengeluaranModel->countAllResults();
+
+        $barangModel = new BarangModel();
+        $data['jumlahBarang'] = $barangModel->countAllResults();
+
+        $pelangganModel = new PelangganModel();
+        $data['jumlahPelanggan'] = $pelangganModel->countAllResults();
+    
+        return view('admin/dashboard_admin', $data); // Mengirimkan data ke view
     }
+    
 
     public function dashboard_owner()
     {
         $karyawanModel = new KaryawanModel();
+        $penggunaModel = new PenggunaModel();
+        $totalstokModel = new TotalStokModel();
+    
+        // Mendapatkan semua data karyawan
         $data['karyawans'] = $karyawanModel->findAll();
-
+    
         // Menghitung jumlah karyawan per posisi
         $data['posisiCounts'] = $karyawanModel->select('posisi, COUNT(*) as count')
             ->groupBy('posisi')
             ->findAll();
-
+    
+        // Menghitung jumlah total pengguna
+        $data['jumlahPengguna'] = $penggunaModel->countAllResults();
+        $data['totalstokBarang'] = $totalstokModel->countAllResults();
+        $data['totalKaryawan'] = $karyawanModel->countAllResults();
+    
         return view('owner/dashboard_owner', $data);
     }
+    
 
     public function logout()
     {

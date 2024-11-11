@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Models\PemasokanModel;
 use App\Models\BarangModel;
+use Dompdf\Dompdf;
 
 class PemasokanController extends BaseController
 {
@@ -95,5 +96,30 @@ class PemasokanController extends BaseController
         );
 
         return redirect()->to('/pemasokan');
+    }
+
+    public function exportPdf()
+    {
+        // Load data dari model
+        $pemasokanModel = new PemasokanModel();
+        $data['pemasokan'] = $pemasokanModel->findAll();
+
+        // Load DomPDF library
+        $dompdf = new Dompdf();
+
+        // Generate HTML view untuk PDF
+        $html = view('pemasokan_pdf', $data);
+
+        // Load HTML ke DomPDF
+        $dompdf->loadHtml($html);
+
+        // (Opsional) Set ukuran dan orientasi kertas
+        $dompdf->setPaper('A4', 'landscape');
+
+        // Render ke PDF
+        $dompdf->render();
+
+        // Output file PDF
+        $dompdf->stream("Laporan_Pemasokan.pdf", array("Attachment" => false));
     }
 }
